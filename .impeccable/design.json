@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T11:25:20+00:00",
+  "title": "Design System: Chougale Constructions",
+  "extensions": {
+    "colorMeta": {
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Card-Stock Charcoal",
+        "canonical": "oklch(22.1% 0.009 59.2)",
+        "tonalRamp": [
+          "#0e0a08",
+          "#272320",
+          "#433f3b",
+          "#615d59",
+          "#847f7b",
+          "#a9a39f",
+          "#cfc9c5",
+          "#f3ede9"
+        ]
+      },
+      "charcoal-2": {
+        "role": "neutral",
+        "displayName": "Pressed Charcoal",
+        "canonical": "oklch(25.6% 0.011 61.0)",
+        "tonalRamp": [
+          "#0f0a07",
+          "#28231f",
+          "#443f3a",
+          "#625c58",
+          "#857f7a",
+          "#aaa39e",
+          "#d0c9c4",
+          "#f4ede7"
+        ]
+      },
+      "charcoal-line": {
+        "role": "neutral",
+        "displayName": "Charcoal Rule",
+        "canonical": "oklch(38.5% 0.016 63.5)",
+        "tonalRamp": [
+          "#100a05",
+          "#2a221c",
+          "#463e37",
+          "#645c54",
+          "#877e77",
+          "#aca39b",
+          "#d2c9c0",
+          "#f7ece4"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Leaf Cream",
+        "canonical": "oklch(94.8% 0.013 82.4)",
+        "tonalRamp": [
+          "#0e0b06",
+          "#27241d",
+          "#433f38",
+          "#615d55",
+          "#848078",
+          "#a9a49c",
+          "#cfcac1",
+          "#f3eee5"
+        ]
+      },
+      "cream-2": {
+        "role": "neutral",
+        "displayName": "Back-of-Card Cream",
+        "canonical": "oklch(91.5% 0.018 81.3)",
+        "tonalRamp": [
+          "#0f0a04",
+          "#28231a",
+          "#453f35",
+          "#635d52",
+          "#867f75",
+          "#aaa498",
+          "#d0cabe",
+          "#f5eee1"
+        ]
+      },
+      "cream-line": {
+        "role": "neutral",
+        "displayName": "Cream Rule",
+        "canonical": "oklch(82.7% 0.023 78.2)",
+        "tonalRamp": [
+          "#110a02",
+          "#2a2317",
+          "#473e32",
+          "#655c4f",
+          "#887f71",
+          "#ada395",
+          "#d3c9ba",
+          "#f7eddd"
+        ]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone Grey",
+        "canonical": "oklch(48.2% 0.015 71.1)",
+        "tonalRamp": [
+          "#0f0a05",
+          "#29231c",
+          "#453f37",
+          "#635c54",
+          "#867f76",
+          "#aba39a",
+          "#d1c9c0",
+          "#f5ede4"
+        ]
+      },
+      "stone-light": {
+        "role": "neutral",
+        "displayName": "Light Stone",
+        "canonical": "oklch(74.9% 0.019 73.0)",
+        "tonalRamp": [
+          "#100a04",
+          "#2a231a",
+          "#463e35",
+          "#645c52",
+          "#877f74",
+          "#aca398",
+          "#d2c9be",
+          "#f6ede1"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Haldi Gold",
+        "canonical": "oklch(76.6% 0.157 79.0)",
+        "tonalRamp": [
+          "#130900",
+          "#332000",
+          "#573900",
+          "#7e5500",
+          "#ab7400",
+          "#d89600",
+          "#e6c590",
+          "#ffe9b3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The one cover headline, uppercase Big Shoulders."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section heads; invitation verses step down to clamp(2.2rem, 5vw, 3.6rem)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Handover names, milestone and ceremony titles."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Phone number and milestone years, tabular figures."
+      },
+      "marathi-lead": {
+        "displayName": "Marathi Lead",
+        "purpose": "Marathi line paired beneath each English heading; never letter-spaced."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running English and Marathi text, 36 to 52ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav links, buttons, image tags and the promised-day stamp; uppercase, tracked 0.1 to 0.12em."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-lift",
+        "value": "0 30px 60px -20px rgba(0,0,0,0.6)",
+        "purpose": "The closed cover card only."
+      },
+      {
+        "name": "tag-legibility",
+        "value": "text-shadow: 0 1px 8px rgba(0,0,0,0.5)",
+        "purpose": "Uppercase tags set over renders."
+      },
+      {
+        "name": "note-scrim",
+        "value": "linear-gradient(180deg, rgba(21,19,17,0) 0%, rgba(21,19,17,0.86) 55%)",
+        "purpose": "Text over the opened card's render."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All state transitions and the bar slide."
+      },
+      {
+        "name": "state",
+        "value": "0.25s",
+        "purpose": "Button fills and link colour."
+      },
+      {
+        "name": "reveal",
+        "value": "0.4s",
+        "purpose": "Bar slide-in and milestone activation."
+      },
+      {
+        "name": "image-in",
+        "value": "1s",
+        "purpose": "Render fade-in once drawn."
+      },
+      {
+        "name": "card-fold",
+        "value": "scroll-linked, rotateX(0 to 158deg)",
+        "purpose": "Cover card folds open from its top hinge across a 210svh track; disabled under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "form-single",
+        "value": "520px"
+      },
+      {
+        "name": "phone",
+        "value": "600px"
+      },
+      {
+        "name": "bar-compact",
+        "value": "760px"
+      },
+      {
+        "name": "stack",
+        "value": "860px"
+      },
+      {
+        "name": "cover-nav",
+        "value": "900px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold Call Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "The single primary action: call for a site visit. Gold fill, charcoal label, square.",
+      "html": "<div class=\"ds-stock\"><a class=\"ds-btn ds-btn-gold\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2\"/></svg>Call for a site visit</a></div>",
+      "css": ":host{--charcoal:#1e1a17;--charcoal-2:#27221e;--charcoal-line:#4a423b;--cream:#f2ede4;--cream-2:#e9e2d6;--cream-line:#cfc5b6;--stone:#645d55;--stone-light:#b5aca1;--gold:#e8a50c;--display:'Big Shoulders Display','Arial Narrow',sans-serif;--body:'Mukta','Segoe UI',system-ui,sans-serif;--ease:cubic-bezier(0.16,1,0.3,1);} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border:1.5px solid var(--ink,var(--cream));background:transparent;color:var(--ink,var(--cream));font:700 1.05rem/1 var(--display);text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;cursor:pointer;border-radius:0;transition:background .25s var(--ease),color .25s var(--ease);} .ds-btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px;} .ds-btn svg{width:18px;height:18px;flex:none;} .ds-stock{background:var(--charcoal);padding:24px;} .ds-btn-gold{background:var(--gold);border-color:var(--gold);color:var(--charcoal);} .ds-btn-gold:hover{background:var(--cream);border-color:var(--cream);}"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Secondary action outlined in the surface's ink colour; fills with ink on hover.",
+      "html": "<div class=\"ds-stock\"><a class=\"ds-btn\" href=\"#\">WhatsApp us</a></div><div class=\"ds-leaf\"><a class=\"ds-btn\" href=\"#\">Send</a></div>",
+      "css": ":host{--charcoal:#1e1a17;--charcoal-2:#27221e;--charcoal-line:#4a423b;--cream:#f2ede4;--cream-2:#e9e2d6;--cream-line:#cfc5b6;--stone:#645d55;--stone-light:#b5aca1;--gold:#e8a50c;--display:'Big Shoulders Display','Arial Narrow',sans-serif;--body:'Mukta','Segoe UI',system-ui,sans-serif;--ease:cubic-bezier(0.16,1,0.3,1);} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border:1.5px solid var(--ink,var(--cream));background:transparent;color:var(--ink,var(--cream));font:700 1.05rem/1 var(--display);text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;cursor:pointer;border-radius:0;transition:background .25s var(--ease),color .25s var(--ease);} .ds-btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px;} .ds-btn svg{width:18px;height:18px;flex:none;} .ds-stock{background:var(--charcoal);padding:24px;--ink:var(--cream);} .ds-leaf{background:var(--cream);padding:24px;--ink:var(--charcoal);} .ds-stock .ds-btn:hover{background:var(--cream);color:var(--charcoal);} .ds-leaf .ds-btn:hover{background:var(--charcoal);color:var(--cream);}"
+    },
+    {
+      "name": "Bar Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Fixed 60px bar shown after the card opens: monogram, label links, phone in cream.",
+      "html": "<header class=\"ds-bar\"><span class=\"ds-mono\"></span><nav><a href=\"#\">Handovers</a><a href=\"#\">Our story</a><a href=\"#\">Where we build</a><a class=\"ds-call\" href=\"#\">+91 00000 00000</a></nav></header>",
+      "css": ":host{--charcoal:#1e1a17;--charcoal-2:#27221e;--charcoal-line:#4a423b;--cream:#f2ede4;--cream-2:#e9e2d6;--cream-line:#cfc5b6;--stone:#645d55;--stone-light:#b5aca1;--gold:#e8a50c;--display:'Big Shoulders Display','Arial Narrow',sans-serif;--body:'Mukta','Segoe UI',system-ui,sans-serif;--ease:cubic-bezier(0.16,1,0.3,1);} .ds-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px;padding:0 20px;background:rgba(30,26,23,0.94);border-bottom:1px solid var(--charcoal-line);} .ds-mono{width:36px;height:36px;background:var(--cream);box-shadow:inset 0 6px 0 var(--gold);} .ds-bar nav{display:flex;align-items:center;gap:24px;} .ds-bar a{font:700 .9rem/1 var(--display);text-transform:uppercase;letter-spacing:.12em;color:var(--stone-light);text-decoration:none;transition:color .25s var(--ease);} .ds-bar a:hover{color:var(--cream);} .ds-bar a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;} .ds-bar a.ds-call{color:var(--cream);font-size:1.05rem;letter-spacing:.06em;font-variant-numeric:tabular-nums;}"
+    },
+    {
+      "name": "Underlined Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Pressed-charcoal field with a rule underline that turns gold on focus.",
+      "html": "<div class=\"ds-stock\"><label class=\"ds-label\">Where the plot is<input class=\"ds-field\" placeholder=\"Village or area\"></label></div>",
+      "css": ":host{--charcoal:#1e1a17;--charcoal-2:#27221e;--charcoal-line:#4a423b;--cream:#f2ede4;--cream-2:#e9e2d6;--cream-line:#cfc5b6;--stone:#645d55;--stone-light:#b5aca1;--gold:#e8a50c;--display:'Big Shoulders Display','Arial Narrow',sans-serif;--body:'Mukta','Segoe UI',system-ui,sans-serif;--ease:cubic-bezier(0.16,1,0.3,1);} .ds-stock{background:var(--charcoal);padding:24px;} .ds-label{display:grid;gap:6px;color:var(--stone-light);font:400 .98rem/1.6 var(--body);} .ds-field{font:400 18px/1.6 var(--body);color:var(--cream);background:var(--charcoal-2);border:0;border-bottom:1.5px solid var(--charcoal-line);padding:10px 12px;border-radius:0;} .ds-field::placeholder{color:var(--stone-light);opacity:1;} .ds-field:focus{border-bottom-color:var(--gold);outline:none;}"
+    },
+    {
+      "name": "Handover Leaf",
+      "kind": "card",
+      "refersTo": "handover-leaf",
+      "description": "Centred cream invitation leaf in an inset double-line frame, closing on a ruled stamp.",
+      "html": "<article class=\"ds-leafcard\"><h3>Sample Residency</h3><p class=\"ds-mr\" lang=\"mr\">सॅम्पल रेसिडेन्सी</p><p class=\"ds-fam\">The families moved in · Kolhapur city</p><dl><dt>Promised</dt><dd>March 2023</dd><dt>Handed over</dt><dd>March 2023</dd></dl><p class=\"ds-kept\">On the promised day</p></article>",
+      "css": ":host{--charcoal:#1e1a17;--charcoal-2:#27221e;--charcoal-line:#4a423b;--cream:#f2ede4;--cream-2:#e9e2d6;--cream-line:#cfc5b6;--stone:#645d55;--stone-light:#b5aca1;--gold:#e8a50c;--display:'Big Shoulders Display','Arial Narrow',sans-serif;--body:'Mukta','Segoe UI',system-ui,sans-serif;--ease:cubic-bezier(0.16,1,0.3,1);} .ds-leafcard{position:relative;background:var(--cream);color:var(--charcoal);padding:52px 40px;display:grid;justify-items:center;text-align:center;gap:14px;font:400 18px/1.6 var(--body);} .ds-leafcard::before{content:'';position:absolute;inset:12px;border:1px solid var(--cream-line);outline:1px solid var(--cream-line);outline-offset:4px;pointer-events:none;} .ds-leafcard h3{margin:0;font:800 2.6rem/.95 var(--display);text-transform:uppercase;letter-spacing:.01em;} .ds-leafcard p,.ds-leafcard dl{margin:0;} .ds-mr{font-weight:600;letter-spacing:0;} .ds-fam{color:var(--stone);} .ds-leafcard dl{display:grid;grid-template-columns:auto auto;gap:4px 18px;text-align:left;font-size:.98rem;} .ds-leafcard dt{color:var(--stone);} .ds-leafcard dd{margin:0;font-variant-numeric:tabular-nums;} .ds-kept{font:800 1.15rem/1.4 var(--display);text-transform:uppercase;letter-spacing:.06em;border-top:1px solid var(--cream-line);border-bottom:1px solid var(--cream-line);padding:6px 14px 4px;}"
+    },
+    {
+      "name": "Site Ledger Row",
+      "kind": "chip",
+      "refersTo": "site-row",
+      "description": "Ruled list row on cream; tints on hover, inverts to charcoal when selected.",
+      "html": "<ul class=\"ds-sites\"><li><button type=\"button\" aria-pressed=\"true\"><span class=\"n\">Shinganapur</span><span class=\"y\">since 1994</span><span class=\"t\">Office and yard</span></button></li><li><button type=\"button\" aria-pressed=\"false\"><span class=\"n\">Panhala</span><span class=\"y\">2024</span><span class=\"t\">Bungalows</span></button></li></ul>",
+      "css": ":host{--charcoal:#1e1a17;--charcoal-2:#27221e;--charcoal-line:#4a423b;--cream:#f2ede4;--cream-2:#e9e2d6;--cream-line:#cfc5b6;--stone:#645d55;--stone-light:#b5aca1;--gold:#e8a50c;--display:'Big Shoulders Display','Arial Narrow',sans-serif;--body:'Mukta','Segoe UI',system-ui,sans-serif;--ease:cubic-bezier(0.16,1,0.3,1);} .ds-sites{list-style:none;margin:0;padding:0;background:var(--cream);color:var(--charcoal);border-top:1.5px solid var(--charcoal);font:400 18px/1.6 var(--body);} .ds-sites li{border-bottom:1px solid var(--cream-line);} .ds-sites button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:1fr auto;gap:0 12px;width:100%;padding:12px 4px;cursor:pointer;} .ds-sites button:hover{background:var(--cream-2);} .ds-sites button:focus-visible{outline:2px solid var(--charcoal);} .ds-sites .n{font-weight:700;} .ds-sites .y{color:var(--stone);font-variant-numeric:tabular-nums;font-size:.95rem;} .ds-sites .t{grid-column:1/-1;color:var(--stone);font-size:.95rem;} .ds-sites button[aria-pressed=true]{background:var(--charcoal);color:var(--cream);} .ds-sites button[aria-pressed=true] .y,.ds-sites button[aria-pressed=true] .t{color:var(--stone-light);}"
+    },
+    {
+      "name": "Printed Double Rule",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Two 1px lines 3px apart that divide blocks, coloured by the surface's rule token.",
+      "html": "<div class=\"ds-leaf\"><p class=\"ds-salute\" lang=\"mr\">आमच्या घरच्या कार्याला अगत्य येण्याचे करावे</p><div class=\"ds-rule2\"></div><h2>The Chougale family</h2></div>",
+      "css": ":host{--charcoal:#1e1a17;--charcoal-2:#27221e;--charcoal-line:#4a423b;--cream:#f2ede4;--cream-2:#e9e2d6;--cream-line:#cfc5b6;--stone:#645d55;--stone-light:#b5aca1;--gold:#e8a50c;--display:'Big Shoulders Display','Arial Narrow',sans-serif;--body:'Mukta','Segoe UI',system-ui,sans-serif;--ease:cubic-bezier(0.16,1,0.3,1);} .ds-leaf{background:var(--cream);color:var(--charcoal);padding:40px 20px;display:grid;justify-items:center;gap:40px;text-align:center;} .ds-salute{margin:0;font:600 1.8rem/1.3 var(--body);} .ds-rule2{width:min(320px,70%);height:5px;border-top:1px solid var(--cream-line);border-bottom:1px solid var(--cream-line);} .ds-leaf h2{margin:0;font:800 3rem/.95 var(--display);text-transform:uppercase;letter-spacing:.01em;}"
+    },
+    {
+      "name": "Foil-Band Cover Card",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "The closed charcoal card: gold foil band, inset double frame, centred bilingual invitation and the gold call.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-foil\"></div><div class=\"ds-cbody\"><h1>You are invited to see what we built</h1><p class=\"ds-inv\" lang=\"mr\">सस्नेह निमंत्रण</p><a class=\"ds-btn ds-btn-gold\" href=\"#\">Call for a site visit</a></div></div>",
+      "css": ":host{--charcoal:#1e1a17;--charcoal-2:#27221e;--charcoal-line:#4a423b;--cream:#f2ede4;--cream-2:#e9e2d6;--cream-line:#cfc5b6;--stone:#645d55;--stone-light:#b5aca1;--gold:#e8a50c;--display:'Big Shoulders Display','Arial Narrow',sans-serif;--body:'Mukta','Segoe UI',system-ui,sans-serif;--ease:cubic-bezier(0.16,1,0.3,1);} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border:1.5px solid var(--ink,var(--cream));background:transparent;color:var(--ink,var(--cream));font:700 1.05rem/1 var(--display);text-transform:uppercase;letter-spacing:0.1em;text-decoration:none;cursor:pointer;border-radius:0;transition:background .25s var(--ease),color .25s var(--ease);} .ds-btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px;} .ds-btn svg{width:18px;height:18px;flex:none;} .ds-card{position:relative;background:var(--charcoal);border:1px solid var(--charcoal-line);box-shadow:0 30px 60px -20px rgba(0,0,0,.6);color:var(--cream);min-height:360px;display:grid;grid-template-rows:auto 1fr;} .ds-card::before{content:'';position:absolute;inset:30px 12px 12px;border:1px solid var(--charcoal-line);outline:1px solid var(--charcoal-line);outline-offset:4px;pointer-events:none;} .ds-foil{height:18px;background:var(--gold) linear-gradient(100deg,transparent 0 40%,rgba(255,240,200,.55) 50%,transparent 60% 100%) no-repeat;background-size:300% 100%;transition:background-position 1.2s var(--ease);background-position:100% 0;} .ds-card:hover .ds-foil{background-position:-60% 0;} .ds-cbody{display:grid;justify-items:center;align-content:center;gap:18px;text-align:center;padding:40px 32px;position:relative;} .ds-card h1{margin:0;font:800 3.4rem/.95 var(--display);text-transform:uppercase;letter-spacing:.01em;} .ds-inv{margin:0;font:600 1.5rem/1.3 var(--body);} .ds-btn-gold{background:var(--gold);border-color:var(--gold);color:var(--charcoal);} .ds-btn-gold:hover{background:var(--cream);border-color:var(--cream);}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Gruhapravesh Patrika",
+    "overview": "The site is typeset like the printed invitation a Kolhapur family sends when it moves into a new house. Charcoal card stock is the ground; cream inner leaves alternate with it section by section, as the pages of a folded card would. A single haldi-gold foil band sits at the head of the cover, and gold otherwise appears only where the visitor is asked to act. Everything is square-cornered, ruled with fine printed lines, and centred where it speaks as an invitation (who invites, to what, when, where).\n\nEnglish speaks in tall condensed Big Shoulders capitals; Marathi speaks in Mukta, never spaced out, always sitting beside its English line rather than replacing it. Depth comes from paper, not from interface chrome: the cover is a real card that folds open on scroll, and the buildings inside are clay-and-dusk 3D renders rather than stock photography. Density is calm and generous, with tall section padding and narrow measures, so the page reads like a card held in two hands.\n\nThe world deliberately refuses the builder template of a hero photo, stat row, service cards and project grid.",
+    "keyCharacteristics": [
+      "Charcoal stock and cream leaves alternate as whole sections; no third surface.",
+      "One gold foil band, one gold action per view.",
+      "Zero corner radius everywhere.",
+      "Printed double rules and inset double-line frames instead of filled boxes or cards with shadow.",
+      "Bilingual pairs: Big Shoulders capitals for English, Mukta for Marathi.",
+      "Centred invitation typesetting for statements; left-set lists only where the content is a ledger."
+    ],
+    "rules": [
+      {
+        "name": "The One Foil Rule",
+        "body": "Gold appears as the cover's foil band and as the fill of the call action. Every other use is a state mark (focus, selection, the active slab or pin), never decoration, never a second accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Surface Pair Rule",
+        "body": "Each section is either `stock` (charcoal ground, cream ink, `stone-light` muted, `charcoal-line` rules) or `leaf` (cream ground, charcoal ink, `stone` muted, `cream-line` rules). Components read `--ink`, `--muted` and `--rule` from their surface and never hard-code the other surface's colours.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Gold On Cream Rule",
+        "body": "Gold is never text, and never sits on a cream leaf as text or thin line. On cream, the focus and active marks use charcoal.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bilingual Pair Rule",
+        "body": "Every English section head is paired with its Marathi line directly beneath, in Mukta, at Marathi Lead size. Marathi is never set in Big Shoulders, never uppercased and never letter-spaced (`letter-spacing: 0`).",
+        "section": "typography"
+      },
+      {
+        "name": "The Capitals Only For English Rule",
+        "body": "Big Shoulders is always uppercase; tracking is tight (0.01em) at heading sizes and opens to 0.1 to 0.12em only at label size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper Not Chrome Rule",
+        "body": "Nothing floats. A surface is either the card, a leaf, or the stock; no component gets its own shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** alternate whole sections between `stock` and `leaf`, and let components inherit `--ink`, `--muted` and `--rule`.",
+      "**Do** keep gold to the foil band and the call action, plus focus, selection and the active 3D slab or pin.",
+      "**Do** pair every English heading with its Marathi line in Mukta, with `letter-spacing: 0`.",
+      "**Do** keep every corner at 0px and divide with printed rules (1px, 1.5px for ledger heads, the 5px double rule).",
+      "**Do** use tabular figures for phone numbers, years and dates.",
+      "**Do** label placeholder content as placeholder in the visible copy."
+    ],
+    "donts": [
+      "**Don't** set gold text, or gold thin lines, on cream.",
+      "**Don't** add rounded corners, pill buttons, or shadows on components.",
+      "**Don't** letter-space, uppercase, or set Marathi in Big Shoulders.",
+      "**Don't** recolour, retype, fade or place the logo on gold, and keep the horizontal logo at 240px or wider.",
+      "**Don't** introduce a third surface colour or a second accent hue in the interface.",
+      "**Don't** fall back to the builder template of hero photo, stat row, service cards and project grid."
+    ]
+  }
+}

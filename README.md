@@ -1,16 +1,24 @@
 # Chougale Constructions website
 
-Portfolio site for Chougale Constructions, Shinganapur (Kolhapur). One static page, no build step.
+Portfolio site for Chougale Constructions (चौगले कन्स्ट्रक्शन्स), Shinganapur, Kolhapur. Static files, no build step.
 
-- **Hero:** a 3D apartment building (Three.js) that rises floor by floor as you scroll; each floor shows one milestone of the company story.
-- **Flagship Projects:** before/after sliders.
-- **Footprint:** 3D terrain map of Kolhapur district with a pin per site.
+The layout follows Aditya's reference, a dark photo-led architecture site:
 
-All names, years, numbers, projects and site locations are sample content to be replaced.
+- **Hero:** a full-screen dusk photo of a house, the company name across the top, "Plan. Build. Move in.", call buttons and three facts.
+- **All services:** homes and bungalows, apartment buildings, shops and offices, industrial sheds, over a dimmed site photo.
+- **Three steps to your keys:** plot visit and plan, approvals and drawings, build and hand over.
+- **Our projects:** photo cards, plus a before/after slider from construction to handover.
+- **Our story:** milestones by year.
+- **Where we build:** 3D relief model of Kolhapur district with a pin per site.
+- **Book a site visit:** phone, WhatsApp, address and an enquiry form.
+
+Fonts: Lexend Exa (headings), Lexend (body) and Anek Devanagari (Marathi), from Google Fonts. Colours: charcoal, cream and haldi gold. The map uses Three.js r128 from cdnjs.
+
+Photos are hotlinked Unsplash images standing in for the firm's own photos, credited in the footer. All names, years, projects, figures and phone numbers are placeholders.
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the folder (`python3 -m http.server`).
+Serve the folder (`python3 -m http.server`) and open http://localhost:8000.
 
 ## Publish with GitHub Pages
 
@@ -18,9 +26,7 @@ Settings → Pages → Build and deployment → Source: "Deploy from a branch", 
 
 ## Where to edit content
 
-In `index.html`:
+- `index.html`: all text, photos (the `img` URLs), projects and contact details.
+- `assets/main.js`: `SITES`, the map pins (longitude / latitude).
 
-- `STORY`: the milestone shown on each floor (also fills the Our Story timeline)
-- `PROJECTS`: flagship projects
-- `SITES`: Footprint map pins (longitude / latitude)
-- Contact details: the `#contact` section
+Logo and icons are in `assets/`. The `ideas/` folder holds earlier main-page experiments.

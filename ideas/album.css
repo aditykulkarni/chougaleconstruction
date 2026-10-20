@@ -1,0 +1,82 @@
+/* Family album: charcoal album pages, photographs mounted as prints with cream borders and photo corners,
+   captions on cream slips, gold date imprints. Anek carries English and Marathi in one voice. */
+:root {
+  --page: #1e1a17;
+  --page-2: #26211d;
+  --page-line: #3d3630;
+  --cream: #f2ede4;
+  --slip: #efe8dc;
+  --slip-line: #d6ccbc;
+  --stone: #645d55;
+  --stone-light: #b5aca1;
+  --gold: #e8a50c;
+  --latin: "Anek Latin", "Segoe UI", system-ui, sans-serif;
+  --deva: "Anek Devanagari", "Mukta", "Nirmala UI", sans-serif;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scrollbar-color: var(--page-line) var(--page); }
+body { margin: 0; background: var(--page); color: var(--cream); font-family: var(--latin); font-size: 18px; line-height: 1.6; font-variation-settings: "wdth" 100; -webkit-font-smoothing: antialiased; caret-color: var(--gold); }
+::selection { background: var(--gold); color: var(--page); }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-underline-offset: 0.2em; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.slip :focus-visible { outline-color: var(--page); }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: var(--latin); font-weight: 700; font-variation-settings: "wdth" 80; line-height: 1; letter-spacing: -0.01em; text-wrap: balance; }
+.mr { font-family: var(--deva); letter-spacing: 0; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Album page top */
+.top { padding-block: 18px; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.top img { width: 240px; height: auto; }
+.top nav { display: flex; align-items: center; gap: 28px; font-size: 1rem; }
+.top nav a { text-decoration: none; color: var(--stone-light); font-weight: 500; }
+.top nav a:hover { color: var(--cream); }
+.top nav .call { color: var(--cream); font-weight: 600; font-variant-numeric: tabular-nums; }
+@media (max-width: 900px) { .top nav a:not(.call) { display: none; } }
+@media (max-width: 560px) { .top .wrap { flex-wrap: wrap; justify-content: center; gap: 8px; } }
+
+/* A mounted print: cream border, four photo corners, a date imprint */
+.print { position: relative; margin: 0; background: var(--cream); padding: clamp(8px, 1.2vw, 14px); box-shadow: 0 18px 40px -18px rgba(0,0,0,0.7), 0 2px 6px rgba(0,0,0,0.35); }
+.print .ph { position: relative; overflow: hidden; background: var(--page-2); }
+.print .ph img { width: 100%; height: 100%; object-fit: cover; }
+.print .ph::after { content: attr(data-fallback); position: absolute; inset: 0; display: grid; place-items: center; color: var(--stone-light); font-size: 0.9rem; z-index: -1; }
+.corner { position: absolute; width: clamp(22px, 2.6vw, 34px); aspect-ratio: 1; background: var(--page); }
+.corner.tl { top: -6px; left: -6px; clip-path: polygon(0 0, 100% 0, 0 100%); }
+.corner.tr { top: -6px; right: -6px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+.corner.bl { bottom: -6px; left: -6px; clip-path: polygon(0 0, 0 100%, 100% 100%); }
+.corner.br { bottom: -6px; right: -6px; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.stamp { position: absolute; right: clamp(14px, 2vw, 26px); bottom: clamp(12px, 1.6vw, 22px); font-family: var(--latin); font-weight: 600; font-variation-settings: "wdth" 90; font-size: clamp(0.95rem, 1.4vw, 1.2rem); letter-spacing: 0.08em; color: var(--gold); text-shadow: 0 0 6px rgba(232,165,12,0.55); font-variant-numeric: tabular-nums; }
+
+/* A caption slip, typed and tucked onto the page */
+.slip { background: var(--slip); color: var(--page); padding: clamp(20px, 2.6vw, 34px); box-shadow: 0 14px 30px -14px rgba(0,0,0,0.75); }
+.slip .note { color: var(--stone); font-size: 0.95rem; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; border: 1.5px solid currentColor; background: transparent; color: inherit; font: 600 1.05rem/1 var(--latin); text-decoration: none; cursor: pointer; transition: background 0.25s var(--ease), color 0.25s var(--ease); }
+.btn svg { width: 18px; height: 18px; }
+.btn.gold { background: var(--gold); border-color: var(--gold); color: var(--page); }
+.btn.gold:hover { background: var(--page); border-color: var(--page); color: var(--cream); }
+.btn.ghost:hover { background: var(--page); color: var(--cream); }
+
+/* The next page of the album: one handover */
+.next { padding-block: clamp(80px, 10vw, 140px); }
+.next .head { display: grid; gap: 6px; margin-bottom: clamp(36px, 5vw, 64px); }
+.next h2 { font-size: clamp(2.6rem, 6vw, 4.8rem); }
+.next .head .mr { font-size: 1.3rem; font-weight: 600; color: var(--stone-light); }
+.spread { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 4vw, 56px); align-items: center; }
+.spread .before { transform: rotate(-2.2deg); }
+.spread .after { transform: rotate(0.8deg); }
+.spread .before .ph { aspect-ratio: 4 / 5; }
+.spread .after .ph { aspect-ratio: 4 / 3; }
+.spread .cap { margin-top: 18px; display: grid; gap: 4px; }
+.spread .cap h3 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); }
+.spread .cap p { color: var(--stone-light); }
+.spread .kept { color: var(--cream); font-weight: 600; }
+@media (max-width: 760px) { .spread { grid-template-columns: 1fr; } }
+
+.credit { padding-block: 28px 40px; border-top: 1px solid var(--page-line); color: var(--stone-light); font-size: 0.9rem; }
+.compare { position: fixed; z-index: 30; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); background: var(--cream); color: var(--page); padding: 10px 14px; font-weight: 600; text-decoration: none; box-shadow: 0 8px 20px -8px rgba(0,0,0,0.7); }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }

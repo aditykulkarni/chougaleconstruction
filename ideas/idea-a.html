@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wdth,wght@75..125,400..800&family=Anek+Latin:wdth,wght@75..125,400..800&display=swap">
+<link rel="stylesheet" href="album.css">
+<link rel="icon" href="../assets/favicon-32.png">
+<title>Chougale Constructions, idea A</title>
+<style>
+.hero { padding-block: clamp(8px, 2vw, 24px) clamp(60px, 8vw, 110px); }
+.mount { position: relative; transform: rotate(-0.6deg); }
+.mount .ph { aspect-ratio: 16 / 9; max-height: 78vh; width: 100%; }
+.mount .ph img { object-position: 50% 40%; }
+.mount .slip { position: absolute; left: clamp(-28px, -2vw, -12px); bottom: clamp(-70px, -5vw, -40px); width: min(560px, 62%); transform: rotate(1.4deg); display: grid; gap: 14px; }
+.slip h1 { font-size: clamp(2.6rem, 5.4vw, 4.6rem); font-variation-settings: "wdth" 75; }
+.slip h1 .mr { display: block; font-size: 0.62em; font-weight: 700; font-variation-settings: "wdth" 85; margin-bottom: 6px; }
+.slip .line { font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.45; max-width: 34ch; }
+.slip .acts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.hero .side { position: absolute; right: clamp(16px, 2.4vw, 32px); top: clamp(16px, 2.4vw, 32px); background: var(--slip); color: var(--page); padding: 10px 14px; font-weight: 600; transform: rotate(2deg); box-shadow: 0 10px 22px -10px rgba(0,0,0,0.7); font-size: 0.95rem; }
+@media (max-width: 760px) {
+  .mount { transform: none; }
+  .mount .ph { aspect-ratio: 4 / 5; max-height: none; }
+  .mount .slip { position: relative; left: auto; bottom: auto; width: auto; margin: -56px 10px 0; transform: rotate(-1deg); }
+  .hero .side { display: none; }
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="#" aria-label="Chougale Constructions, home"><img src="../assets/chougale-logo-horizontal-dark.svg" alt="चौगले कन्स्ट्रक्शन्स Chougale Constructions" width="240" height="60"></a><nav aria-label="Main"><a href="#handovers">Handovers</a><a href="#story">Our story</a><a href="#footprint">Where we build</a><a class="call" href="tel:+910000000000">+91 00000 00000</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap">
+  <figure class="print mount"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+    <div class="ph"><img src="https://images.unsplash.com/photo-1787055482226-8544df1e754a?auto=format&fit=crop&w=1800&q=72" alt="A finished apartment building rising above green trees" fetchpriority="high"></div>
+    <span class="stamp">'24 01 26</span>
+    <p class="side">Sample Residency, handed over on the promised day</p>
+    <div class="slip">
+      <h1><span class="mr" lang="mr">चौगले कन्स्ट्रक्शन्स</span>Chougale Constructions</h1>
+      <p class="line">For more than 30 years, Kolhapur families have moved into buildings with our name on them, on the day we promised.</p>
+      <p class="line mr" lang="mr">तीस वर्षांहून अधिक, एक घराणं, एक जबाबदार माणूस.</p>
+      <div class="acts"><a class="btn gold" href="tel:+910000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg> Call for a site visit</a><a class="btn ghost" href="https://wa.me/910000000000">WhatsApp us</a></div>
+    </div>
+  </figure>
+</div></section>
+<section class="next" id="handovers"><div class="wrap">
+  <div class="head"><h2>The day they moved in</h2><p class="mr" lang="mr">ज्या दिवशी कुटुंब घरी आलं</p></div>
+  <div class="spread">
+    <figure class="print before"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="ph"><img src="https://images.unsplash.com/photo-1621511075938-f03482369feb?auto=format&fit=crop&w=900&q=70" alt="A concrete frame under construction with bamboo scaffolding" loading="lazy"></div>
+      <span class="stamp">'22 08 14</span></figure>
+    <div>
+      <figure class="print after"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1787055482226-8544df1e754a?auto=format&fit=crop&w=1200&q=70" alt="The finished apartment building above green trees" loading="lazy"></div>
+        <span class="stamp">'24 01 26</span></figure>
+      <div class="cap"><h3>Sample Residency, Kolhapur city</h3><p>Apartment building, G+6. Promised for January 2024. <span class="kept">Keys handed over 26 January 2024.</span></p></div>
+    </div>
+  </div>
+</div></section>
+<footer class="credit"><div class="wrap">Every name, date and figure here is a placeholder. Photos are reference stand-ins from Unsplash by Hrishikesh Chhatre, Design Hills, Rohan Solankurkar, Darshan Bacchav and Vignesh Moorthy, until the family's own photos go in.</div></footer>
+</main>
+<a class="compare" href="idea-b.html">See idea B</a>
+</body>
+</html>
