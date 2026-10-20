@@ -4,438 +4,355 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Chougale Constructions</title>
-<meta name="description" content="Chougale Constructions, Shinganapur, Kolhapur. A family firm handing over homes and buildings across Kolhapur district on the promised day for more than 30 years.">
-<meta name="theme-color" content="#1e1a17">
+<meta name="description" content="Chougale Constructions, Shinganapur, Kolhapur. Homes, bungalows, apartment buildings, shops and industrial sheds across Kolhapur district, for more than 30 years.">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Mukta:wght@400;500;600;700&display=swap">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400..700&family=Lexend+Exa:wght@500;600;700&family=Lexend:wght@300;400;500;600&display=swap">
 <style>
+/* Follows Aditya's reference: a dark, photo-led architecture site. Full-bleed dusk photo with the name across the top,
+   services over a dimmed site photo, three steps, then project photo cards. Brand charcoal, cream and haldi gold.
+   Lexend Exa for wide display type, Lexend for reading, Anek Devanagari for Marathi. */
 :root {
-  --charcoal: #1e1a17;
-  --charcoal-2: #27221e;
-  --charcoal-line: #4a423b;
+  --ink: #1e1a17;
+  --ink-2: #26211d;
+  --line: rgba(242, 237, 228, 0.18);
   --cream: #f2ede4;
-  --cream-2: #e9e2d6;
-  --cream-line: #cfc5b6;
-  --stone: #645d55;
-  --stone-light: #b5aca1;
+  --soft: #cfc7bb;
+  --muted: #a39a8f;
   --gold: #e8a50c;
-  --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
-  --body: "Mukta", "Segoe UI", system-ui, sans-serif;
+  --display: "Lexend Exa", "Arial", sans-serif;
+  --body: "Lexend", "Segoe UI", system-ui, sans-serif;
+  --deva: "Anek Devanagari", "Nirmala UI", "Mukta", sans-serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scrollbar-color: var(--charcoal-line) var(--charcoal); }
-body { margin: 0; background: var(--charcoal); color: var(--cream); font-family: var(--body); font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; caret-color: var(--gold); }
-::selection { background: var(--gold); color: var(--charcoal); }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { margin: 0; background: var(--ink); color: var(--cream); font: 300 17px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--gold); color: var(--ink); }
 img { max-width: 100%; display: block; }
-[hidden] { display: none !important; }
-h1, h2, h3, .disp { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em; line-height: 0.95; text-wrap: balance; }
-p { margin: 0; }
-a { color: inherit; text-underline-offset: 0.2em; }
+a { color: inherit; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-.leaf :focus-visible { outline-color: var(--charcoal); }
-.mr { font-family: var(--body); letter-spacing: 0; text-transform: none; }
-.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
-.leaf { background: var(--cream); color: var(--charcoal); --muted: var(--stone); --rule: var(--cream-line); --ink: var(--charcoal); }
-.stock { background: var(--charcoal); color: var(--cream); --muted: var(--stone-light); --rule: var(--charcoal-line); --ink: var(--cream); }
+h1, h2, h3, p { margin: 0; }
+h2, h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; line-height: 1.08; letter-spacing: 0; text-wrap: balance; }
+.mr { font-family: var(--deva); letter-spacing: 0; text-transform: none; }
+.wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.kick { font-size: 0.95rem; color: var(--muted); margin-bottom: 10px; }
+.kick .mr { margin-left: 8px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 24px; border: 1px solid var(--cream); color: var(--cream); background: transparent; font: 500 0.98rem/1 var(--body); text-decoration: none; cursor: pointer; transition: background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease); }
+.btn:hover { background: var(--cream); color: var(--ink); }
+.btn.solid { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.btn.solid:hover { background: var(--cream); border-color: var(--cream); }
+.btn svg { width: 18px; height: 18px; }
 
-/* Printed double rule, as on an invitation card */
-.rule2 { height: 5px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 28px; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); font: 700 1.05rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; cursor: pointer; border-radius: 0; transition: background 0.25s var(--ease), color 0.25s var(--ease); }
-.btn:hover { background: var(--ink); color: var(--charcoal); }
-.leaf .btn:hover { color: var(--cream); }
-.btn.gold { background: var(--gold); border-color: var(--gold); color: var(--charcoal); }
-.btn.gold:hover { background: var(--cream); border-color: var(--cream); }
-.btn svg { width: 18px; height: 18px; flex: none; }
+/* Header */
+.bar { position: fixed; inset: 0 0 auto; z-index: 20; padding-top: env(safe-area-inset-top, 0px); transition: background 0.3s var(--ease); }
+.bar.solid { background: rgba(30, 26, 23, 0.94); box-shadow: 0 1px 0 var(--line); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 72px; }
+.bar .icon { width: 40px; height: 40px; }
+.bar nav { display: flex; gap: 30px; font-size: 0.92rem; }
+.bar nav a { text-decoration: none; color: var(--soft); }
+.bar nav a:hover, .bar nav a.call { color: var(--cream); }
+.bar nav a.call { font-weight: 500; }
+@media (max-width: 860px) { .bar nav a:not(.call) { display: none; } }
 
-/* ---------- The card: closed on arrival, the cover lifts as you scroll ---------- */
-.cover { position: relative; height: 210svh; }
-.cover-stage { position: sticky; top: 0; height: 100svh; display: grid; place-items: center; perspective: 2400px; overflow: hidden; padding: 14px; }
-.card { position: relative; width: min(100%, 1120px); height: min(100%, 760px); transform-style: preserve-3d; }
-.inside { position: absolute; inset: 0; background: var(--charcoal); overflow: hidden; }
-.inside img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; transform: translateY(calc((1 - var(--p, 0)) * 18%)); opacity: 0; transition: opacity 1s var(--ease); }
-.inside img.in { opacity: 1; }
-.inside .note { position: absolute; left: 0; right: 0; bottom: 0; padding: clamp(20px, 4vw, 44px); background: linear-gradient(180deg, rgba(21,19,17,0) 0%, rgba(21,19,17,0.86) 55%); display: grid; gap: 6px; opacity: calc((var(--p, 0) - 0.55) * 3); }
-.inside .note p { max-width: 40ch; font-size: clamp(1.25rem, 2.2vw, 1.7rem); line-height: 1.3; font-weight: 500; }
-.inside .note .mr { font-size: 1.05rem; color: var(--stone-light); font-weight: 500; }
-.front { position: absolute; inset: 0; transform-origin: 50% 0; transform: rotateX(calc(var(--p, 0) * 158deg)); transform-style: preserve-3d; }
-.front-face, .front-back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-.front-face { background: var(--charcoal); border: 1px solid var(--charcoal-line); box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6); display: grid; grid-template-rows: auto 1fr auto; }
-.front-back { background: var(--cream-2); transform: rotateY(180deg) rotateZ(180deg); }
-.front-face::before { content: ""; position: absolute; inset: calc(clamp(14px, 2.2vw, 22px) + 12px) 12px 12px; border: 1px solid var(--charcoal-line); outline: 1px solid var(--charcoal-line); outline-offset: 4px; pointer-events: none; }
-.foil { height: clamp(14px, 2.2vw, 22px); background: var(--gold) linear-gradient(100deg, transparent 0 40%, rgba(255,240,200,0.55) 50%, transparent 60% 100%) no-repeat; background-size: 300% 100%; background-position: calc(100% - var(--p, 0) * 160%) 0; }
-.front-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: clamp(22px, 3vw, 34px) clamp(26px, 4vw, 48px) 0; position: relative; }
-.front-top img { width: 240px; height: auto; }
-.front-top nav { display: flex; gap: 26px; }
-.front-top nav a { font: 700 0.95rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.12em; color: var(--stone-light); text-decoration: none; }
-.front-top nav a:hover { color: var(--cream); }
-@media (max-width: 900px) { .front-top nav { display: none; } }
-.front-body { align-self: center; justify-self: center; text-align: center; display: grid; justify-items: center; gap: clamp(14px, 2vw, 22px); padding: 0 24px; max-width: 900px; }
-.front-body .invite { font-size: clamp(1.3rem, 2.4vw, 1.75rem); font-weight: 600; color: var(--cream); line-height: 1.3; }
-.front-body h1 { font-size: clamp(3.2rem, 9vw, 6rem); color: var(--cream); }
-.front-body .what { max-width: 46ch; color: var(--stone-light); font-size: clamp(1rem, 1.6vw, 1.15rem); }
-.front-body .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px; }
-.front-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 0 clamp(26px, 4vw, 48px) clamp(24px, 3vw, 34px); color: var(--stone-light); font-size: 0.95rem; position: relative; }
-.front-foot .hint { display: inline-flex; align-items: center; gap: 8px; }
-.front-foot .hint svg { width: 16px; height: 16px; animation: nudge 2.4s var(--ease) infinite; }
-@keyframes nudge { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(4px); } }
-@media (max-width: 600px) {
-  .front-top { justify-content: center; }
-  .front-foot { justify-content: center; text-align: center; }
-  .front-foot .place { display: none; }
-}
-
-/* Small bar that appears once the card is open */
-.bar { position: fixed; top: 0; left: 0; right: 0; z-index: 20; background: rgba(30,26,23,0.94); border-bottom: 1px solid var(--charcoal-line); transform: translateY(-100%); transition: transform 0.4s var(--ease); }
-.bar.on { transform: none; }
-.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; }
-.bar img { width: 36px; height: 36px; }
-.bar nav { display: flex; align-items: center; gap: 24px; }
-.bar nav a { font: 700 0.9rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.12em; color: var(--stone-light); text-decoration: none; }
-.bar nav a:hover { color: var(--cream); }
-.bar nav a.call { color: var(--cream); font-size: 1.05rem; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
-@media (max-width: 760px) { .bar nav a:not(.call) { display: none; } }
-
-/* ---------- The invitation text: who invites, to what, when, where ---------- */
-.wording { padding-block: clamp(80px, 11vw, 150px); text-align: center; }
-.wording .wrap { display: grid; justify-items: center; gap: clamp(40px, 5vw, 64px); }
-.wording .salute { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 600; line-height: 1.3; }
-.wording .salute span { display: block; font-size: 1rem; font-weight: 400; color: var(--muted); margin-top: 4px; }
-.verses { display: grid; gap: clamp(36px, 4vw, 52px); max-width: 760px; }
-.verse { display: grid; gap: 8px; justify-items: center; }
-.verse h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
-.verse p { max-width: 52ch; color: var(--stone); }
-.verse .mr { font-weight: 600; font-size: 1.15rem; color: var(--charcoal); }
-.wording .rule2 { width: min(320px, 70%); }
-
-/* ---------- Handovers: one invitation per finished building ---------- */
-.handovers { padding-block: clamp(80px, 10vw, 140px); }
-.sec-head { display: grid; gap: 12px; justify-items: center; text-align: center; margin-bottom: clamp(48px, 6vw, 80px); }
-.sec-head h2 { font-size: clamp(2.6rem, 6vw, 4.6rem); }
-.sec-head .mr { font-size: 1.2rem; font-weight: 600; color: var(--muted); }
-.sec-head p:not(.mr) { color: var(--muted); max-width: 52ch; }
-.sec-head .ph { font-size: 0.95rem; font-style: italic; }
-.handover { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 0; margin-bottom: clamp(48px, 7vw, 96px); background: var(--cream); color: var(--charcoal); position: relative; }
-.handover:nth-child(even) { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
-.handover:nth-child(even) .ba { order: 2; }
-.handover-text { position: relative; padding: clamp(28px, 4vw, 52px); display: grid; align-content: center; justify-items: center; text-align: center; gap: 14px; }
-.handover-text::before { content: ""; position: absolute; inset: 12px; border: 1px solid var(--cream-line); outline: 1px solid var(--cream-line); outline-offset: 4px; pointer-events: none; }
-.handover-text h3 { font-size: clamp(2rem, 3.4vw, 2.9rem); }
-.handover-text .fam { color: var(--stone); }
-.handover-text dl { margin: 6px 0 0; display: grid; grid-template-columns: auto auto; gap: 4px 18px; text-align: left; font-size: 0.98rem; }
-.handover-text dt { color: var(--stone); }
-.handover-text dd { margin: 0; font-variant-numeric: tabular-nums; }
-.handover-text .kept { margin-top: 8px; font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; font-size: 1.15rem; border-top: 1px solid var(--cream-line); border-bottom: 1px solid var(--cream-line); padding: 6px 14px 4px; }
+/* Hero */
+.hero { position: relative; min-height: 100svh; display: grid; align-content: space-between; overflow: hidden; isolation: isolate; }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; z-index: -2; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(20,17,15,0.72) 0%, rgba(20,17,15,0.15) 34%, rgba(20,17,15,0.2) 55%, rgba(20,17,15,0.9) 100%); }
+.hero .name { padding-top: calc(86px + env(safe-area-inset-top, 0px)); }
+.hero h1 { font-family: var(--display); font-weight: 700; text-transform: uppercase; line-height: 0.92; font-size: clamp(2.6rem, 11vw, 10rem); letter-spacing: -0.02em; }
+.hero h1 small { display: block; font-size: 0.36em; letter-spacing: 0.02em; font-weight: 600; margin-top: 0.3em; }
+.hero h1 .mr { display: block; font-size: 0.32em; font-weight: 600; line-height: 1.3; margin-top: 0.35em; color: var(--soft); }
+.hero .base { padding-block: 40px clamp(36px, 6vw, 64px); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 80px); align-items: end; }
+.hero .say { font-family: var(--display); font-weight: 600; text-transform: uppercase; font-size: clamp(1.5rem, 2.8vw, 2.4rem); line-height: 1.1; }
+.hero .say .mr { display: block; font-size: 0.7em; margin-top: 8px; color: var(--soft); }
+.hero .acts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.hero .lede { color: var(--soft); max-width: 52ch; }
+.hero .lede strong { color: var(--cream); font-weight: 500; display: block; margin-bottom: 8px; }
+.figs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 26px; }
+.figs div { border-left: 2px solid var(--cream); padding-left: 12px; }
+.figs b { display: block; font: 600 clamp(1.5rem, 2.6vw, 2.3rem)/1.1 var(--display); }
+.figs span { font-size: 0.86rem; color: var(--soft); line-height: 1.35; display: block; margin-top: 4px; }
 @media (max-width: 860px) {
-  .handover, .handover:nth-child(even) { grid-template-columns: 1fr; }
-  .handover:nth-child(even) .ba { order: 0; }
-}
-.ba { position: relative; min-height: 420px; max-width: 100%; overflow: hidden; background: var(--charcoal); cursor: ew-resize; touch-action: pan-y; user-select: none; --pos: 50%; }
-@media (max-width: 860px) { .ba { min-height: 0; aspect-ratio: 4 / 5; } }
-.ba > img, .ba .after img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-.ba .after { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--pos)); }
-.ba .line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; transform: translateX(-1px); background: var(--cream); pointer-events: none; }
-.ba .knob { position: absolute; top: 50%; left: var(--pos); width: 44px; height: 44px; transform: translate(-50%, -50%); background: var(--cream); pointer-events: none; display: grid; place-items: center; }
-.ba .knob svg { width: 22px; height: 22px; color: var(--charcoal); }
-.ba .tag { position: absolute; top: 14px; padding: 6px 8px 4px; background: rgba(30,26,23,0.82); pointer-events: none; color: var(--cream); font: 700 0.9rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.12em; text-shadow: 0 1px 8px rgba(0,0,0,0.5); }
-.ba .tag.l { left: 12px; } .ba .tag.r { right: 12px; }
-.ba input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
-.ba:focus-within { outline: 2px solid var(--gold); outline-offset: 3px; }
-.still-pending { position: absolute; inset: 0; display: grid; place-items: center; color: var(--stone-light); font-size: 0.95rem; }
-
-/* ---------- Three ceremonies of every job ---------- */
-.rites { padding-block: clamp(80px, 10vw, 140px); }
-.rite-list { list-style: none; margin: 0 auto; padding: 0; max-width: 860px; border-top: 1.5px solid var(--charcoal); }
-.rite { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr); grid-template-areas: "mr t" "mr when" "mr d"; gap: 2px clamp(20px, 4vw, 48px); padding: clamp(22px, 3vw, 32px) 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
-.rite .rmr { grid-area: mr; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.35; align-self: center; }
-.rite h3 { grid-area: t; font-size: clamp(1.5rem, 2.2vw, 1.9rem); }
-.rite .when { grid-area: when; font-weight: 600; color: var(--stone); }
-.rite p { grid-area: d; color: var(--stone); max-width: 46ch; margin-top: 6px; }
-@media (max-width: 600px) { .rite { grid-template-columns: 1fr; grid-template-areas: "mr" "t" "when" "d"; } }
-
-/* ---------- Story: 30 years, one floor at a time ---------- */
-.story { padding-block: clamp(80px, 10vw, 140px) 0; }
-.story-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(24px, 4vw, 64px); }
-.story-stage { position: sticky; top: 60px; height: min(84svh, 760px); }
-.story-stage canvas { display: block; width: 100%; height: 100%; }
-.story-stage .caption { position: absolute; left: 0; bottom: 8px; color: var(--stone-light); font-size: 0.95rem; }
-.milestones { list-style: none; margin: 0; padding: 0; }
-.milestone { min-height: 64svh; padding-top: 20svh; display: grid; align-content: start; gap: 10px; color: var(--stone-light); transition: color 0.4s var(--ease); }
-.milestone:first-child { padding-top: 8svh; }
-.milestone:last-child { min-height: 80svh; }
-.milestone { scroll-margin-top: 60px; }
-.milestone .yr { text-transform: uppercase; font-family: var(--display); font-weight: 800; font-size: clamp(3.2rem, 6vw, 5rem); line-height: 0.9; color: #7a7067; transition: color 0.4s var(--ease); font-variant-numeric: tabular-nums; }
-.milestone h3 { font-size: clamp(1.8rem, 2.8vw, 2.4rem); }
-.milestone p { max-width: 36ch; }
-.milestone.on { color: var(--cream); }
-.milestone.on .yr { color: var(--cream); }
-@media (max-width: 860px) {
-  .story-grid { grid-template-columns: 1fr; gap: 0; }
-  .story-stage { top: 60px; height: 44svh; z-index: 2; background: var(--charcoal); border-bottom: 1px solid var(--charcoal-line); }
-  .milestone { min-height: 46svh; padding-top: 8svh; }
-  .milestone:last-child { min-height: 56svh; }
+  .hero .base { grid-template-columns: 1fr; }
+  .figs { grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
 }
 
-/* ---------- Where our families live ---------- */
-.footprint { padding-block: clamp(80px, 10vw, 140px); }
-.map-grid { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+/* Photo-backed bands */
+.band { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(80px, 10vw, 140px); }
+.band > img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; opacity: 0.32; }
+.band::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, var(--ink) 0%, rgba(30,26,23,0.55) 40%, rgba(30,26,23,0.7) 70%, var(--ink) 100%); }
+.band h2 { font-size: clamp(1.9rem, 4.2vw, 3.4rem); }
+
+.services .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); margin-top: clamp(36px, 5vw, 56px); }
+.svc { position: relative; padding-bottom: clamp(70px, 8vw, 110px); }
+.svc h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); margin-bottom: 14px; }
+.svc h3 .mr { display: block; font-size: 1.05rem; font-weight: 600; color: var(--muted); margin-top: 6px; }
+.svc p { color: var(--soft); font-size: 0.95rem; }
+.svc .num { position: absolute; left: -4px; bottom: 0; font: 700 clamp(4rem, 8vw, 7rem)/1 var(--display); color: rgba(242, 237, 228, 0.12); z-index: -1; }
+@media (max-width: 960px) { .services .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .services .grid { grid-template-columns: 1fr; } .svc { padding-bottom: 56px; } }
+
+.steps .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); margin-top: clamp(40px, 6vw, 72px); }
+.step { position: relative; padding-top: clamp(44px, 5vw, 64px); border-bottom: 1px solid var(--line); padding-bottom: 22px; }
+.step .word { position: absolute; top: 0; left: -2px; font: 700 clamp(3rem, 6vw, 5.4rem)/0.8 var(--display); text-transform: lowercase; color: rgba(242, 237, 228, 0.14); z-index: -1; }
+.step h3 { font-size: clamp(1rem, 1.5vw, 1.2rem); margin-bottom: 12px; }
+.step h3 .mr { display: block; font-size: 1.05rem; color: var(--gold); margin-top: 6px; font-weight: 600; }
+.step p { color: var(--soft); font-size: 0.95rem; }
+@media (max-width: 760px) { .steps .grid { grid-template-columns: 1fr; } }
+
+/* Projects */
+.projects { padding-block: clamp(80px, 10vw, 140px) clamp(60px, 8vw, 100px); }
+.projects .head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; }
+.projects h2 { font-size: clamp(1.9rem, 4.2vw, 3.4rem); }
+.cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: clamp(32px, 4vw, 48px); }
+.card { position: relative; aspect-ratio: 3 / 4.4; overflow: hidden; background: var(--ink-2); isolation: isolate; }
+.card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 0.8s var(--ease); }
+.card:hover img { transform: scale(1.04); }
+.card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, transparent 45%, rgba(20,17,15,0.92) 100%); }
+.card .txt { position: absolute; left: 18px; right: 18px; bottom: 18px; }
+.card h3 { font: 500 1.08rem/1.25 var(--body); text-transform: none; }
+.card h3 .mr { display: block; font-size: 0.98rem; color: var(--soft); font-weight: 500; }
+.card p { font-size: 0.86rem; color: var(--soft); margin-top: 6px; line-height: 1.45; }
+@media (max-width: 960px) { .cards { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .cards { grid-template-columns: 1fr; } .card { aspect-ratio: 4 / 3.6; } }
+
+/* Before and after */
+.ba-wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(24px, 4vw, 56px); align-items: center; margin-top: clamp(64px, 8vw, 110px); }
+.ba { --pos: 50%; position: relative; aspect-ratio: 16 / 10; overflow: hidden; cursor: ew-resize; touch-action: pan-y; user-select: none; background: var(--ink-2); }
+.ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.ba .after { clip-path: inset(0 0 0 var(--pos)); }
+.ba .line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: var(--cream); }
+.ba .knob { position: absolute; top: 50%; left: var(--pos); width: 48px; height: 48px; margin: -24px 0 0 -24px; border-radius: 50%; background: var(--cream); color: var(--ink); display: grid; place-items: center; }
+.ba .knob svg { width: 22px; height: 22px; }
+.ba .tag { position: absolute; top: 14px; padding: 6px 10px; background: rgba(20,17,15,0.82); font-size: 0.85rem; }
+.ba .tag.l { left: 14px; } .ba .tag.r { right: 14px; }
+.ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; }
+.ba:has(input:focus-visible) { outline: 2px solid var(--gold); outline-offset: 3px; }
+.ba-text h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); margin-bottom: 14px; }
+.ba-text p { color: var(--soft); }
+.ba-text dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; margin: 20px 0 0; font-size: 0.95rem; }
+.ba-text dt { color: var(--muted); }
+.ba-text dd { margin: 0; }
+@media (max-width: 860px) { .ba-wrap { grid-template-columns: 1fr; } }
+
+/* Story */
+.story .rows { margin-top: clamp(36px, 5vw, 56px); border-top: 1px solid var(--line); }
+.story .row { display: grid; grid-template-columns: 160px minmax(0, 1fr) minmax(0, 1.4fr); gap: 20px; padding-block: 22px; border-bottom: 1px solid var(--line); align-items: baseline; }
+.story .yr { font: 600 1.6rem/1 var(--display); }
+.story .row h3 { font: 500 1.08rem/1.3 var(--body); text-transform: none; }
+.story .row p { color: var(--soft); font-size: 0.95rem; }
+@media (max-width: 760px) { .story .row { grid-template-columns: 1fr; gap: 6px; } }
+
+/* Footprint */
+.foot { padding-block: clamp(80px, 10vw, 140px); }
+.foot h2 { font-size: clamp(1.9rem, 4.2vw, 3.4rem); }
+.map-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(24px, 4vw, 56px); margin-top: clamp(32px, 4vw, 48px); align-items: center; }
 .map-stage { position: relative; aspect-ratio: 4 / 3; max-width: 100%; touch-action: pan-y; cursor: grab; }
 .map-stage.dragging { cursor: grabbing; }
 .map-stage canvas { display: block; width: 100%; height: 100%; }
-.map-note { color: var(--stone); font-size: 0.95rem; margin-top: 8px; }
-.pin-label { position: absolute; left: 0; top: 0; font: 600 0.9rem/1.4 var(--body); color: var(--charcoal); white-space: nowrap; cursor: pointer; background: none; border: 0; padding: 2px 4px; }
-.pin-label.hq { font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; font-size: 1rem; }
-.pin-label.on { box-shadow: inset 0 -3px 0 var(--charcoal); }
+.pin-label { position: absolute; left: 0; top: 0; font: 500 0.82rem/1.3 var(--body); color: var(--ink); background: var(--cream); white-space: nowrap; cursor: pointer; border: 0; padding: 3px 7px; }
+.pin-label.hq { background: var(--gold); font-weight: 600; }
+.pin-label.on { box-shadow: 0 0 0 2px var(--ink); }
 .map-stage.compact .pin-label:not(.hq):not(.on) { display: none !important; }
-.sites { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--charcoal); }
-.sites li { border-bottom: 1px solid var(--rule); }
-.sites button { all: unset; box-sizing: border-box; display: grid; grid-template-columns: 1fr auto; gap: 0 12px; width: 100%; padding: 12px 4px; cursor: pointer; }
-.sites button:hover { background: var(--cream-2); }
-.sites button:focus-visible { outline: 2px solid var(--charcoal); }
-.sites .n { font-weight: 700; }
-.sites .y { color: var(--stone); font-variant-numeric: tabular-nums; font-size: 0.95rem; }
-.sites .t { grid-column: 1 / -1; color: var(--stone); font-size: 0.95rem; }
-.sites button[aria-pressed="true"] { background: var(--charcoal); color: var(--cream); }
-.sites button[aria-pressed="true"] .y, .sites button[aria-pressed="true"] .t { color: var(--stone-light); }
+.sites { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.sites li { border-bottom: 1px solid var(--line); }
+.sites button { all: unset; box-sizing: border-box; display: grid; grid-template-columns: 1fr auto; gap: 0 12px; width: 100%; padding: 12px 6px; cursor: pointer; }
+.sites button:hover { background: var(--ink-2); }
+.sites button:focus-visible { outline: 2px solid var(--gold); }
+.sites .nm { font-weight: 500; }
+.sites .yr { color: var(--muted); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.sites .ty { grid-column: 1 / -1; color: var(--muted); font-size: 0.9rem; }
+.sites button[aria-pressed="true"] { background: var(--cream); color: var(--ink); }
+.sites button[aria-pressed="true"] .yr, .sites button[aria-pressed="true"] .ty { color: #5a524a; }
 @media (max-width: 860px) { .map-grid { grid-template-columns: 1fr; } .map-stage { aspect-ratio: 1 / 1; } }
 
-/* ---------- RSVP: the close of every invitation ---------- */
-.rsvp { padding-block: clamp(80px, 10vw, 140px); }
-.rsvp-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
-.rsvp-card { position: relative; text-align: center; display: grid; gap: 18px; justify-items: center; padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 44px); border: 1px solid var(--charcoal-line); outline: 1px solid var(--charcoal-line); outline-offset: -8px; }
-.rsvp-card .mr.big { font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 600; }
-.rsvp-card h2 { font-size: clamp(2.6rem, 5vw, 4rem); }
-.rsvp-card .phone { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1; letter-spacing: 0.02em; text-decoration: none; font-variant-numeric: tabular-nums; }
-.rsvp-card .phone:hover { text-decoration: underline; text-decoration-thickness: 2px; }
-.rsvp-card .sign { color: var(--stone-light); }
-.rsvp-card .sign .mr { display: block; color: var(--cream); font-size: 1.2rem; font-weight: 600; }
-.rsvp-card address { font-style: normal; color: var(--stone-light); }
-.rsvp-card .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-form.enq { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-form.enq h3 { grid-column: 1 / -1; font-size: clamp(1.6rem, 2.4vw, 2rem); }
-form.enq .lead { grid-column: 1 / -1; color: var(--stone-light); margin-top: -8px; }
-form.enq label { display: grid; gap: 6px; color: var(--stone-light); font-size: 0.98rem; }
-form.enq .full { grid-column: 1 / -1; }
-form.enq input, form.enq select, form.enq textarea { font: inherit; color: var(--cream); background: var(--charcoal-2); border: 0; border-bottom: 1.5px solid var(--charcoal-line); padding: 10px 12px; border-radius: 0; width: 100%; }
-form.enq input:focus, form.enq select:focus, form.enq textarea:focus { border-bottom-color: var(--gold); outline: none; }
-form.enq input:user-invalid { border-bottom-color: #e07a5f; }
-form.enq .err { grid-column: 1 / -1; color: #f0a48f; }
-form.enq textarea { resize: vertical; }
-form.enq ::placeholder { color: var(--stone-light); opacity: 1; }
-form.enq select { appearance: none; -webkit-appearance: none; padding-right: 40px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5aca1' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 18px; }
-form.enq .ok { grid-column: 1 / -1; color: var(--cream); }
-@media (max-width: 860px) { .rsvp-grid { grid-template-columns: 1fr; } }
-@media (max-width: 520px) { form.enq { grid-template-columns: 1fr; } }
+/* Contact */
+.contact .grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(28px, 5vw, 80px); margin-top: clamp(32px, 4vw, 48px); }
+.contact .phone { font: 600 clamp(1.6rem, 3.4vw, 2.6rem)/1.1 var(--display); text-decoration: none; display: inline-block; margin-block: 8px 20px; }
+.contact address { font-style: normal; color: var(--soft); margin-top: 24px; }
+.contact .acts { display: flex; flex-wrap: wrap; gap: 12px; }
+form { display: grid; gap: 16px; }
+label { display: grid; gap: 6px; font-size: 0.9rem; color: var(--soft); }
+input, select, textarea { font: 400 1rem/1.4 var(--body); color: var(--cream); background: rgba(242,237,228,0.06); border: 1px solid var(--line); padding: 12px 14px; border-radius: 0; width: 100%; }
+input::placeholder, textarea::placeholder { color: var(--muted); }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); outline-offset: 0; border-color: transparent; }
+[aria-invalid="true"] { border-color: #f08a6c; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 520px) { .row2 { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .contact .grid { grid-template-columns: 1fr; } }
+.msg { font-size: 0.95rem; }
+.msg.err { color: #f4a48c; }
+.msg.ok { color: var(--gold); }
 
-footer { padding-block: 36px 52px; border-top: 1px solid var(--charcoal-line); color: var(--stone-light); font-size: 0.95rem; }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; }
-
-/* Without motion the card simply sits open above the page */
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .cover { height: auto; }
-  .cover-stage { position: relative; height: auto; display: grid; gap: 14px; perspective: none; }
-  .card { height: auto; display: grid; gap: 14px; }
-  .front, .inside { position: relative; transform: none; }
-  .front { order: -1; }
-  .front { min-height: 92svh; }
-  .front-back { display: none; }
-  .inside { aspect-ratio: 16 / 9; }
-  .inside .note { opacity: 1; }
-  @media (max-width: 600px) { .inside { aspect-ratio: auto; display: grid; } .inside img { aspect-ratio: 4 / 5; height: auto; } .inside .note { position: static; background: var(--charcoal); } }
-  .inside img { transform: none; }
-  .front-foot .hint svg { animation: none; }
-  .milestone, .milestone .yr { transition: none; }
-}
+footer { border-top: 1px solid var(--line); padding-block: 32px 40px; color: var(--muted); font-size: 0.85rem; }
+footer .wrap { display: grid; gap: 14px; }
+footer img { width: 240px; height: auto; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card img, .btn, .bar { transition: none; } }
 </style>
 </head>
 <body>
-
-<header class="bar" id="bar" aria-label="Site">
+<header class="bar" id="bar">
   <div class="wrap">
-    <a href="#top"><img src="assets/chougale-icon-dark.svg" alt="Chougale Constructions, back to top" width="36" height="36"></a>
-    <nav aria-label="Sections">
-      <a href="#handovers">Handovers</a>
-      <a href="#story">Our story</a>
-      <a href="#footprint">Where we build</a>
-      <a href="#rsvp">Contact</a>
+    <a href="#top" aria-label="Chougale Constructions, back to top"><img class="icon" src="assets/chougale-icon-dark.svg" alt="" width="40" height="40"></a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a><a href="#projects">Projects</a><a href="#story">Our story</a><a href="#footprint">Where we build</a>
       <a class="call" href="tel:+910000000000">+91 00000 00000</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="cover" id="top" aria-label="Invitation">
-    <div class="cover-stage">
-      <div class="card" id="card">
-        <div class="inside" id="inside">
-          <div class="note">
-            <p>Every building in these pages was handed over on the day we promised the family.</p>
-            <p class="mr" lang="mr">दिलेल्या दिवशी, दिलेल्या शब्दात.</p>
-          </div>
-        </div>
-        <div class="front">
-          <div class="front-face">
-            <div class="foil"></div>
-            <div class="front-top">
-              <img src="assets/chougale-logo-horizontal-dark.svg" alt="Chougale Constructions · चौगले कन्स्ट्रक्शन्स" width="240" height="84">
-              <nav aria-label="Sections">
-                <a href="#handovers">Handovers</a>
-                <a href="#story">Our story</a>
-                <a href="#footprint">Where we build</a>
-                <a href="#rsvp">Contact</a>
-              </nav>
-            </div>
-            <div class="front-body">
-              <h1>You are invited to see what we built</h1>
-              <p class="invite mr" lang="mr">सस्नेह निमंत्रण</p>
-              <p class="what">For more than 30 years, Kolhapur families have moved into homes built by the Chougale family, on the day we promised them.</p>
-              <div class="actions">
-                <a class="btn gold" href="tel:+910000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Call for a site visit</a>
-                <a class="btn" href="https://wa.me/910000000000">WhatsApp us</a>
-              </div>
-            </div>
-            <div class="front-foot">
-              <span class="place">Shinganapur, Kolhapur</span>
-              <span class="hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Scroll to open</span>
-            </div>
-          </div>
-          <div class="front-back" aria-hidden="true"></div>
-        </div>
+<section class="hero" id="top">
+  <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=2200&q=72" alt="A modern house at dusk with a lit doorway" fetchpriority="high">
+  <div class="wrap name">
+    <h1>Chougale<small>Constructions</small><span class="mr" lang="mr">चौगले कन्स्ट्रक्शन्स</span></h1>
+  </div>
+  <div class="wrap base">
+    <div>
+      <p class="say">Plan. Build.<br>Move in.<span class="mr" lang="mr">भूमिपूजन ते गृहप्रवेश</span></p>
+      <div class="acts">
+        <a class="btn solid" href="tel:+910000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Book a site visit</a>
+        <a class="btn" href="#projects">See our projects</a>
       </div>
     </div>
-  </section>
-
-  <section class="wording leaf" aria-labelledby="w-who">
-    <div class="wrap">
-      <p class="salute mr" lang="mr">आमच्या घरच्या कार्याला अगत्य येण्याचे करावे<span lang="en">Do come, as family</span></p>
-      <div class="rule2"></div>
-      <div class="verses">
-        <div class="verse">
-          <h2 id="w-who">The Chougale family</h2>
-          <p class="mr" lang="mr">चौगले परिवार, शिंगणापूर</p>
-          <p>Builders in Shinganapur for more than 30 years. Our name is on every building, so one of us answers for it, from the plot to the keys.</p>
-        </div>
-        <div class="verse">
-          <h2>invites you to the handover of your home</h2>
-          <p class="mr" lang="mr">तुमच्या घराचा गृहप्रवेश</p>
-          <p>Houses, bungalows, apartment buildings, shops and industrial sheds, built by our own site team rather than hired crews.</p>
-        </div>
-        <div class="verse">
-          <h2>on the date we promise</h2>
-          <p class="mr" lang="mr">ठरलेल्या दिवशी</p>
-          <p>We fix the handover date before work starts and write it into the agreement.</p>
-        </div>
-        <div class="verse">
-          <h2>anywhere in Kolhapur district</h2>
-          <p class="mr" lang="mr">कोल्हापूर जिल्ह्यात कुठेही</p>
-          <p>From Panhala and Radhanagari to Ichalkaranji and Gadhinglaj.</p>
-        </div>
+    <div>
+      <p class="lede"><strong>One family name, building around Kolhapur for more than 30 years.</strong>Homes, bungalows, apartment buildings, shops and sheds, built by our own site team and handed over on the date we promise. One person answers to you from the plot to the keys.</p>
+      <div class="figs">
+        <div><b>30+</b><span>years under one family name</span></div>
+        <div><b>Own</b><span>site team, no subcontracting</span></div>
+        <div><b>1</b><span>person answerable, plot to keys</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="handovers stock" id="handovers" aria-labelledby="h-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="h-title">Handovers</h2>
-        <p class="mr" lang="mr">गृहप्रवेश</p>
-        <p>Drag across each picture to go from the bare plot to the day the family moved in.</p>
-      </div>
-      <div id="projList"></div>
+<section class="band services" id="services">
+  <img class="bg" src="https://images.unsplash.com/photo-1663057276815-0e07863a2e46?auto=format&fit=crop&w=1800&q=60" alt="" loading="lazy">
+  <div class="wrap">
+    <p class="kick">What we build<span class="mr" lang="mr">आमच्या सेवा</span></p>
+    <h2>All services</h2>
+    <div class="grid">
+      <div class="svc"><h3>Homes and bungalows<span class="mr" lang="mr">घरे व बंगले</span></h3><p>Your own house on your own plot, from the first drawing to the gruhapravesh, with one price agreed up front.</p><span class="num" aria-hidden="true">01</span></div>
+      <div class="svc"><h3>Apartment buildings<span class="mr" lang="mr">अपार्टमेंट इमारती</span></h3><p>G+3 to G+7 buildings for landowners and families, built floor by floor by our own team.</p><span class="num" aria-hidden="true">02</span></div>
+      <div class="svc"><h3>Shops and offices<span class="mr" lang="mr">दुकाने व कार्यालये</span></h3><p>Commercial complexes in town centres, planned so shops can open on the day they are handed over.</p><span class="num" aria-hidden="true">03</span></div>
+      <div class="svc"><h3>Industrial sheds<span class="mr" lang="mr">औद्योगिक शेड</span></h3><p>Steel-frame sheds and factory buildings for units at Shiroli, Kagal and Gokul Shirgaon MIDC.</p><span class="num" aria-hidden="true">04</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="rites leaf" aria-labelledby="r-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="r-title">Every job, three ceremonies</h2>
-        <p>The same three days mark a bungalow or a six-storey block. We are there for all of them.</p>
-      </div>
-      <ol class="rite-list" id="riteList"></ol>
+<section class="band steps" id="steps">
+  <img class="bg" src="https://images.unsplash.com/photo-1621511075938-f03482369feb?auto=format&fit=crop&w=1800&q=60" alt="" loading="lazy">
+  <div class="wrap">
+    <p class="kick">How it works<span class="mr" lang="mr">तीन टप्पे</span></p>
+    <h2>Three steps to your keys</h2>
+    <div class="grid">
+      <div class="step"><span class="word" aria-hidden="true">one</span><h3>Plot visit and plan<span class="mr" lang="mr">भूमिपूजन</span></h3><p>We walk your plot with you, then fix the drawings, the price and the handover date in writing.</p></div>
+      <div class="step"><span class="word" aria-hidden="true">two</span><h3>Approvals and drawings<span class="mr" lang="mr">मंजुरी व आराखडे</span></h3><p>Structural drawings, permissions and a slab-by-slab schedule are ready before work starts on site.</p></div>
+      <div class="step"><span class="word" aria-hidden="true">three</span><h3>Build and hand over<span class="mr" lang="mr">गृहप्रवेश</span></h3><p>Our own team builds it, and you get the keys on the promised date, with every bill and drawing in one file.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="story stock" id="story" aria-labelledby="s-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="s-title">Thirty years, one floor at a time</h2>
-        <p class="mr" lang="mr">आमचा प्रवास, मजल्या-मजल्याने</p>
-        <p>Each floor of this building is one chapter of the family firm.</p>
-        <p class="ph">Years and milestones are placeholders until the family confirms them.</p>
-      </div>
-      <div class="story-grid">
-        <div class="story-stage" id="storyStage">
-          <canvas id="storyCanvas" aria-hidden="true"></canvas>
-          <p class="caption" id="storyCaption">Ground floor</p>
-        </div>
-        <ol class="milestones" id="milestones"></ol>
-      </div>
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="kick">Our work<span class="mr" lang="mr">प्रमुख प्रकल्प</span></p><h2>Our projects</h2></div>
+      <a class="btn" href="tel:+910000000000">Visit a finished site</a>
     </div>
-  </section>
+    <div class="cards">
+      <article class="card"><img src="https://images.unsplash.com/photo-1787055482226-8544df1e754a?auto=format&fit=crop&w=800&q=70" alt="An apartment building rising above green trees" loading="lazy"><div class="txt"><h3>Sample Residency<span class="mr" lang="mr">सॅम्पल रेसिडेन्सी</span></h3><p>Apartment building, G+6, Kolhapur city. Handed over on the promised date.</p></div></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1657302157898-eda546941dde?auto=format&fit=crop&w=800&q=70" alt="A family house with a red roof" loading="lazy"><div class="txt"><h3>Sample Bungalow<span class="mr" lang="mr">सॅम्पल बंगला</span></h3><p>Private house, G+1, Panhala road. Built for one family on their own plot.</p></div></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=800&q=70" alt="A white house among trees" loading="lazy"><div class="txt"><h3>Sample Farmhouse<span class="mr" lang="mr">सॅम्पल फार्महाऊस</span></h3><p>Weekend house near Radhanagari, set among the trees on the plot.</p></div></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1779976955613-b74623824d1c?auto=format&fit=crop&w=800&q=70" alt="Two modern residential buildings under a blue sky" loading="lazy"><div class="txt"><h3>Sample Heights<span class="mr" lang="mr">सॅम्पल हाइट्स</span></h3><p>Two residential buildings, G+7, built together for one landowner.</p></div></article>
+    </div>
 
-  <section class="footprint leaf" id="footprint" aria-labelledby="f-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="f-title">Where our families live</h2>
-        <p class="mr" lang="mr">आमचे कार्यक्षेत्र</p>
-        <p>Kolhapur district, from the Sahyadri foothills in the west to the Panchganga plain in the east. Drag the model to turn it, or pick a place.</p>
+    <div class="ba-wrap">
+      <div class="ba">
+        <img src="https://images.unsplash.com/photo-1621511075938-f03482369feb?auto=format&fit=crop&w=1400&q=70" alt="The building as a concrete frame with bamboo scaffolding" loading="lazy">
+        <img class="after" src="https://images.unsplash.com/photo-1787055482226-8544df1e754a?auto=format&fit=crop&w=1400&q=70" alt="The same kind of building finished, above green trees" loading="lazy">
+        <span class="tag l">During the build</span><span class="tag r">Handed over</span>
+        <div class="line"></div>
+        <div class="knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Compare the building during construction and after handover">
       </div>
-      <div class="map-grid">
-        <div>
-          <div class="map-stage" id="mapStage"><canvas id="mapCanvas" aria-label="Relief model of Kolhapur district with our sites marked"></canvas></div>
-          <p class="map-note">Relief model, positions approximate. The Panchganga is shown in blue.</p>
-        </div>
-        <div>
-          <ul class="sites" id="siteRows" aria-label="Places we build"></ul>
-          <p class="map-note">Places and years are placeholders until confirmed.</p>
-        </div>
+      <div class="ba-text">
+        <h3>From slab to keys</h3>
+        <p>Drag across the photo to see a building during the build and on handover day. Your real before-and-after photos will go here.</p>
+        <dl><dt>Building</dt><dd>Apartment building, G+6</dd><dt>Place</dt><dd>Kolhapur city</dd><dt>Promised</dt><dd>March 2023</dd><dt>Handed over</dt><dd>March 2023</dd></dl>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="rsvp stock" id="rsvp" aria-labelledby="c-title">
-    <div class="wrap rsvp-grid">
-      <div class="rsvp-card">
-        <h2 id="c-title">Call us about your plot</h2>
+<section class="band story" id="story">
+  <div class="wrap">
+    <p class="kick">Since 1994<span class="mr" lang="mr">आमचा प्रवास</span></p>
+    <h2>Our story</h2>
+    <div class="rows">
+      <div class="row"><span class="yr">1994</span><h3>A yard in Shinganapur</h3><p>The family starts building beside the Panchganga with one yard and its own crew.</p></div>
+      <div class="row"><span class="yr">1999</span><h3>The first apartment building</h3><p>Four storeys in Kolhapur city, handed over on the promised date.</p></div>
+      <div class="row"><span class="yr">2009</span><h3>Shops and offices</h3><p>Our first commercial complex, in Ichalkaranji.</p></div>
+      <div class="row"><span class="yr">2014</span><h3>Industrial sheds</h3><p>Steel-frame sheds for units at Shiroli MIDC.</p></div>
+      <div class="row"><span class="yr">Today</span><h3>The next generation</h3><p>The same yard and the same name, with a larger team and taller buildings.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="foot" id="footprint">
+  <div class="wrap">
+    <p class="kick">Across the district<span class="mr" lang="mr">आमचे कार्यक्षेत्र</span></p>
+    <h2>Where we build</h2>
+    <div class="map-grid">
+      <div class="map-stage" id="mapStage"><canvas id="mapCanvas" aria-label="Relief model of Kolhapur district with our sites marked"></canvas></div>
+      <ul class="sites" id="siteRows" aria-label="Places we have built"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="contact">
+  <img class="bg" src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=55" alt="" loading="lazy">
+  <div class="wrap">
+    <p class="kick">Talk to us<span class="mr" lang="mr">संपर्क साधा</span></p>
+    <h2>Book a site visit</h2>
+    <div class="grid">
+      <div>
+        <p>Call or WhatsApp and the person who will answer for your building comes to see your plot.</p>
         <a class="phone" href="tel:+910000000000">+91 00000 00000</a>
-        <div class="actions">
-          <a class="btn gold" href="tel:+910000000000">Call now</a>
-          <a class="btn" href="https://wa.me/910000000000">WhatsApp</a>
-        </div>
-        <address>Chougale Constructions, Shinganapur, Karvir, Kolhapur 416010<br>office@example.com</address>
-        <p class="sign">With regards, yours sincerely<span class="mr" lang="mr">कळावे, लोभ असावा. आपले नम्र, चौगले परिवार</span></p>
+        <div class="acts"><a class="btn solid" href="tel:+910000000000">Call now</a><a class="btn" href="https://wa.me/910000000000">WhatsApp</a></div>
+        <address>Chougale Constructions, Shinganapur, Karvir, Kolhapur 416010</address>
       </div>
-      <form class="enq" id="enq" novalidate>
-        <h3>Or write to us</h3>
-        <p class="lead">Tell us about the plot. One of the family will call you back.</p>
-        <label for="f-name">Your name<input id="f-name" name="name" required autocomplete="name"></label>
-        <label for="f-phone">Phone<input id="f-phone" name="phone" required inputmode="tel" autocomplete="tel" pattern="[0-9 +\-]{10,}"></label>
-        <label for="f-type">What you want to build
-          <select id="f-type" name="type"><option>House or bungalow</option><option>Apartment building</option><option>Shops or offices</option><option>Industrial shed</option><option>Something else</option></select>
+      <form id="enq" novalidate>
+        <div class="row2">
+          <label>Your name<input name="name" autocomplete="name" required placeholder="Full name"></label>
+          <label>Phone<input name="phone" type="tel" autocomplete="tel" required pattern="[0-9 +]{10,14}" placeholder="10-digit mobile"></label>
+        </div>
+        <label>What do you want to build?
+          <select name="kind" required><option value="">Choose one</option><option>House or bungalow</option><option>Apartment building</option><option>Shops or offices</option><option>Industrial shed</option><option>Something else</option></select>
         </label>
-        <label for="f-where">Where the plot is<input id="f-where" name="where" placeholder="Village or area"></label>
-        <label class="full" for="f-msg">Anything else<textarea id="f-msg" name="msg" rows="3"></textarea></label>
-        <p class="err" id="enqErr" role="alert" hidden>Please add your name and a phone number with at least 10 digits.</p>
-        <div class="full"><button class="btn" type="submit">Send</button></div>
-        <p class="ok" id="enqOk" hidden>Thank you. This form is not connected yet, so please call or WhatsApp us for now.</p>
+        <label>Where is the plot?<input name="place" placeholder="Village or area"></label>
+        <p class="msg err" id="enqErr" role="alert" hidden>Please fill in your name, a 10-digit phone number and what you want to build.</p>
+        <p class="msg ok" id="enqOk" role="status" hidden>Thank you. This is a preview, so nothing was sent yet. Please call us for now.</p>
+        <div><button class="btn solid" type="submit">Send enquiry</button></div>
       </form>
     </div>
-  </section>
+  </div>
+</section>
 </main>
 
-<footer class="stock">
+<footer>
   <div class="wrap">
-    <span>© Chougale Constructions · <span class="mr" lang="mr">चौगले कन्स्ट्रक्शन्स</span> · Shinganapur, Kolhapur</span>
-    <span>Phone numbers, years, projects and pictures are placeholders until confirmed. Pictures are 3D renders.</span>
+    <img src="assets/chougale-logo-horizontal-dark.svg" alt="चौगले कन्स्ट्रक्शन्स Chougale Constructions" width="240" height="60">
+    <p>Project names, dates, figures and the phone number are placeholders. Photos are reference stand-ins from Unsplash by Brian Babb, Darshan Bacchav, Design Hills, Hrishikesh Chhatre, Rohan Solankurkar, Phil Hearing and Vaibhav Surana, until our own photos go in.</p>
   </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="assets/site.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>
