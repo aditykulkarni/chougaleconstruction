@@ -1,16 +1,20 @@
 # Chougale Constructions website
 
-Portfolio site for Chougale Constructions, Shinganapur (Kolhapur). One static page, no build step.
+Portfolio site for Chougale Constructions (चौगले कन्स्ट्रक्शन्स), Shinganapur, Kolhapur. Static files, no build step.
 
-- **Hero:** a 3D apartment building (Three.js) that rises floor by floor as you scroll; each floor shows one milestone of the company story.
-- **Flagship Projects:** before/after sliders.
-- **Footprint:** 3D terrain map of Kolhapur district with a pin per site.
+- **Hero:** full-screen dusk render of an apartment building with lit windows, the company name set large across it.
+- **What we do:** four services. **Three steps:** how a job runs.
+- **Flagship projects:** before/after sliders, empty plot to finished building, rendered at dusk.
+- **Our story:** a 3D building that rises one floor per milestone as you scroll; the gold slab marks the floor being built.
+- **Where we build:** 3D relief model of Kolhapur district with a pin per site.
 
-All names, years, numbers, projects and site locations are sample content to be replaced.
+Colours, fonts and logo follow the brand guidelines: charcoal, cream and haldi gold; Big Shoulders Display for English headings, Mukta for body text and all Marathi. The 3D scenes use Three.js r128 from cdnjs.
+
+All names, years, numbers, projects, phone numbers and site locations are sample content to be replaced. Real project photos can replace the rendered pictures later.
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the folder (`python3 -m http.server`).
+Serve the folder (`python3 -m http.server`) and open http://localhost:8000.
 
 ## Publish with GitHub Pages
 
@@ -18,9 +22,13 @@ Settings → Pages → Build and deployment → Source: "Deploy from a branch", 
 
 ## Where to edit content
 
-In `index.html`:
+In `assets/site.js`, at the top:
 
-- `STORY`: the milestone shown on each floor (also fills the Our Story timeline)
+- `STORY`: one milestone per floor of the story building
 - `PROJECTS`: flagship projects
-- `SITES`: Footprint map pins (longitude / latitude)
-- Contact details: the `#contact` section
+- `SERVICES` and `STEPS`: the two numbered sections
+- `SITES`: map pins (longitude / latitude)
+
+In `index.html`: hero text and figures, the contact section, and the footer.
+
+Logo and icons are in `assets/`.
