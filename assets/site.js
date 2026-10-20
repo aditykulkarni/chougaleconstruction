@@ -3,40 +3,34 @@
 
   // ---------- Content (sample until confirmed) ----------
   const STORY = [
-    { fl: "Ground floor", year: "2004", title: "A yard in Shinganapur", text: "The firm starts beside the Panchganga with one yard and a crew of six." },
-    { fl: "1st floor", year: "2008", title: "First apartment building", text: "Four storeys in Kolhapur city, handed over on the promised date." },
-    { fl: "2nd floor", year: "2011", title: "25 families housed", text: "Most new work now comes from people who live in our buildings." },
-    { fl: "3rd floor", year: "2013", title: "Shops and offices", text: "Our first commercial complex, in Ichalkaranji." },
-    { fl: "4th floor", year: "2016", title: "Industrial sheds", text: "Steel-frame sheds for units at Shiroli MIDC." },
-    { fl: "5th floor", year: "2019", title: "100 projects", text: "Homes, schools and a hospital wing across six talukas." },
-    { fl: "6th floor", year: "2024", title: "The next generation", text: "Same yard, a larger team, and taller buildings." },
-    { fl: "Roof", year: "Today", title: "Your building next", text: "Tell us about your plot and we will visit the site.", cta: true }
+    { fl: "Ground floor", year: "1994", title: "A yard in Shinganapur", text: "The family starts building beside the Panchganga with one yard and its own crew." },
+    { fl: "1st floor", year: "1999", title: "The first apartment building", text: "Four storeys in Kolhapur city, handed over on the promised date." },
+    { fl: "2nd floor", year: "2004", title: "Word of mouth", text: "Most new work now comes from people who live in our buildings." },
+    { fl: "3rd floor", year: "2009", title: "Shops and offices", text: "Our first commercial complex, in Ichalkaranji." },
+    { fl: "4th floor", year: "2014", title: "Industrial sheds", text: "Steel-frame sheds for units at Shiroli MIDC." },
+    { fl: "5th floor", year: "2019", title: "Across the district", text: "Homes and public buildings well beyond Kolhapur city." },
+    { fl: "6th floor", year: "2024", title: "The next generation", text: "The same yard and the same name, with a larger team and taller buildings." },
+    { fl: "Roof", year: "Next", title: "Your building", text: "Tell us about your plot and we will come and see it.", cta: true }
   ];
   const PROJECTS = [
-    { name: "Sample Residency", mr: "सॅम्पल रेसिडेन्सी", kind: "apartment", type: "Residential, G+6", place: "Kolhapur city", year: "2023", area: "42,000 sq ft" },
-    { name: "Sample Trade Centre", mr: "सॅम्पल ट्रेड सेंटर", kind: "commercial", type: "Shops and offices, G+3", place: "Ichalkaranji", year: "2021", area: "28,500 sq ft" },
-    { name: "Sample Bungalow", mr: "सॅम्पल बंगला", kind: "bungalow", type: "Private house, G+1", place: "Panhala road", year: "2024", area: "3,200 sq ft" }
+    { name: "Sample Residency", mr: "सॅम्पल रेसिडेन्सी", kind: "apartment", fam: "The families", type: "Apartment building, G+6", place: "Kolhapur city", promised: "March 2023", handed: "March 2023" },
+    { name: "Sample Trade Centre", mr: "सॅम्पल ट्रेड सेंटर", kind: "commercial", fam: "The shop owners", type: "Shops and offices, G+3", place: "Ichalkaranji", promised: "June 2021", handed: "May 2021" },
+    { name: "Sample Bungalow", mr: "सॅम्पल बंगला", kind: "bungalow", fam: "The sample family", type: "Private house, G+1", place: "Panhala road", promised: "January 2024", handed: "January 2024" }
   ];
-  const SERVICES = [
-    { t: "Design and approvals", d: "Plans, structural design and municipal approvals, prepared with our own architects and engineers." },
-    { t: "Turnkey construction", d: "Foundation to finishing with our own site team, materials and supervision. No subcontracted surprises." },
-    { t: "Project management", d: "One site engineer, a weekly progress report, and a schedule you can hold us to." },
-    { t: "Interiors and finishing", d: "Tiles, woodwork, painting and fittings, so the building is ready to move into on handover day." }
-  ];
-  const STEPS = [
-    { t: "Site visit and estimate", d: "We walk the plot with you, listen to what you need, and give a clear written estimate." },
-    { t: "Design and approval", d: "Drawings, structure and permissions are finished before any work starts on site." },
-    { t: "Build and hand over", d: "Our team builds to the drawings and hands over a finished building, with every bill on record." }
+  const RITES = [
+    { mr: "भूमिपूजन", t: "Breaking ground", when: "Day one", d: "We walk the plot with you, fix the drawings, the price and the handover date, and then break ground." },
+    { mr: "स्लॅब", t: "Slab day", when: "Every floor", d: "Every slab is cast by our own team with the family's engineer on site. You are welcome to watch it poured." },
+    { mr: "गृहप्रवेश", t: "Moving in", when: "The promised date", d: "We hand over the keys on the date we wrote down, with every bill and drawing in one file." }
   ];
   const SITES = [
-    { name: "Shinganapur", type: "Office and yard", years: "since 2004", lon: 74.205, lat: 16.735, hq: true },
-    { name: "Kolhapur city", type: "Apartment buildings", years: "2008 to now", lon: 74.243, lat: 16.705 },
+    { name: "Shinganapur", type: "Office and yard", years: "since 1994", lon: 74.205, lat: 16.735, hq: true },
+    { name: "Kolhapur city", type: "Apartment buildings", years: "1999 to now", lon: 74.243, lat: 16.705 },
     { name: "Shiroli MIDC", type: "Industrial sheds", years: "2016", lon: 74.285, lat: 16.757 },
     { name: "Panhala", type: "Bungalows", years: "2024", lon: 74.11, lat: 16.812 },
     { name: "Ichalkaranji", type: "Commercial complex", years: "2021", lon: 74.46, lat: 16.691 },
-    { name: "Kagal", type: "School building", years: "2018", lon: 74.315, lat: 16.577 },
+    { name: "Kagal", type: "Public building", years: "2018", lon: 74.315, lat: 16.577 },
     { name: "Radhanagari", type: "Farmhouse", years: "2020", lon: 73.998, lat: 16.413 },
-    { name: "Gadhinglaj", type: "Hospital wing", years: "2019", lon: 74.35, lat: 16.223 }
+    { name: "Gadhinglaj", type: "Public building", years: "2019", lon: 74.35, lat: 16.223 }
   ];
 
   const isSmall = Math.min(window.innerWidth, window.innerHeight) < 600;
@@ -46,26 +40,59 @@
   const hasGL = (() => { try { const c = document.createElement("canvas"); return !!(window.THREE && (c.getContext("webgl") || c.getContext("experimental-webgl"))); } catch (e) { return false; } })();
 
   // ---------- Page content ----------
+  const knob = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>';
   function renderContent() {
     document.getElementById("milestones").innerHTML = STORY.map((s, i) =>
-      `<li class="milestone${i === 0 ? " on" : ""}" data-i="${i}"><div class="fl label">${s.fl} · ${s.year}</div><h3>${s.title}</h3><p>${s.text}</p>${s.cta ? '<p><a class="btn" href="#contact">Discuss your project</a></p>' : ""}</li>`).join("");
-    const cols = (list) => list.map((c, i) => `<div class="col"><span class="num" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span><h3>${c.t}</h3><p>${c.d}</p></div>`).join("");
-    document.getElementById("serviceCols").innerHTML = cols(SERVICES);
-    document.getElementById("stepCols").innerHTML = cols(STEPS);
+      `<li class="milestone${i === 0 ? " on" : ""}" data-i="${i}"><span class="yr">${s.year}</span><h3>${s.title}</h3><p>${s.text}</p>${s.cta ? '<p><a class="btn" href="#rsvp">Tell us about your plot</a></p>' : ""}</li>`).join("");
+    document.getElementById("riteList").innerHTML = RITES.map(r =>
+      `<li class="rite"><span class="rmr mr" lang="mr">${r.mr}</span><h3>${r.t}</h3><span class="when">${r.when}</span><p>${r.d}</p></li>`).join("");
     document.getElementById("projList").innerHTML = PROJECTS.map((p, i) =>
-      `<article class="proj">
+      `<article class="handover">
         <div class="ba" id="ba${i}">
-          <div class="still-pending">Loading model</div>
-          <span class="tag l label">Plot</span><span class="tag r label">Handed over</span>
-          <div class="line"></div><div class="knob"></div>
+          <div class="still-pending">Drawing the picture</div>
+          <span class="tag l">Plot</span><span class="tag r">Moving in</span>
+          <div class="line"></div><div class="knob">${knob}</div>
           <input type="range" min="0" max="100" value="50" aria-label="Compare the plot and the finished building for ${p.name}">
         </div>
-        <h3>${p.name}</h3><p class="mr" lang="mr">${p.mr}</p>
-        <dl><dt>Type</dt><dd>${p.type}</dd><dt>Place</dt><dd>${p.place}</dd><dt>Handed over</dt><dd>${p.year}</dd><dt>Built area</dt><dd>${p.area}</dd></dl>
+        <div class="handover-text">
+          <h3>${p.name}</h3>
+          <p class="mr" lang="mr">${p.mr}</p>
+          <p class="fam">${p.fam} moved in · ${p.place}</p>
+          <dl><dt>Building</dt><dd>${p.type}</dd><dt>Promised</dt><dd>${p.promised}</dd><dt>Handed over</dt><dd>${p.handed}</dd></dl>
+          <p class="kept">${p.handed === p.promised ? "On the promised day" : "Ahead of the promised day"}</p>
+        </div>
       </article>`).join("");
     document.getElementById("siteRows").innerHTML = SITES.map((s, i) =>
-      `<tr><td><button type="button" data-i="${i}" aria-pressed="${s.hq ? "true" : "false"}"><span class="n">${s.name}</span><span class="y">${s.years}</span><span class="t">${s.type}</span></button></td></tr>`).join("");
-    document.getElementById("enq").addEventListener("submit", e => { e.preventDefault(); document.getElementById("enqOk").hidden = false; });
+      `<li><button type="button" data-i="${i}" aria-pressed="${s.hq ? "true" : "false"}"><span class="n">${s.name}</span><span class="y">${s.years}</span><span class="t">${s.type}</span></button></li>`).join("");
+    const form = document.getElementById("enq");
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const ok = form.checkValidity();
+      form.querySelectorAll("input, select, textarea").forEach(f => {
+        const bad = !f.checkValidity();
+        f.setAttribute("aria-invalid", bad ? "true" : "false");
+        if (bad) f.setAttribute("aria-describedby", "enqErr"); else f.removeAttribute("aria-describedby");
+      });
+      document.getElementById("enqErr").hidden = ok;
+      document.getElementById("enqOk").hidden = !ok;
+      if (!ok) form.querySelector(":invalid").focus();
+    });
+  }
+
+  // The card cover lifts as the visitor scrolls; the small bar appears once it is open
+  function initCover() {
+    const cover = document.getElementById("top"), card = document.getElementById("card"), bar = document.getElementById("bar");
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const span = Math.max(1, cover.offsetHeight - window.innerHeight);
+      const p = reduced ? 1 : clamp((window.scrollY - cover.offsetTop) / (span * 0.75));
+      card.style.setProperty("--p", reduced ? 0 : p.toFixed(4));
+      bar.classList.toggle("on", window.scrollY > cover.offsetTop + cover.offsetHeight - window.innerHeight * 0.6);
+    };
+    window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
   }
 
   function initSliders() {
@@ -88,8 +115,8 @@
   }
 
   if (!hasGL) {
-    renderContent(); initSliders();
-    document.querySelectorAll(".still-pending").forEach(el => { el.textContent = "Model view needs a browser with 3D graphics"; });
+    renderContent(); initSliders(); initCover();
+    document.querySelectorAll(".still-pending").forEach(el => { el.textContent = "Pictures need a browser with 3D graphics"; });
     document.getElementById("mapStage").hidden = true;
     return;
   }
@@ -418,14 +445,14 @@
   function placeStills(s) {
     const img = new Image();
     img.alt = ""; img.src = s.hero;
-    document.getElementById("heroBg").appendChild(img);
+    document.getElementById("inside").prepend(img);
     requestAnimationFrame(() => img.classList.add("in"));
     PROJECTS.forEach((p, i) => {
       const ba = document.getElementById("ba" + i);
       ba.querySelector(".still-pending").remove();
       const before = new Image(); before.src = s["before" + i]; before.alt = "Empty plot with survey pegs";
       const after = document.createElement("div"); after.className = "after";
-      after.innerHTML = `<img src="${s["after" + i]}" alt="Render of ${p.name} at dusk">`;
+      after.innerHTML = `<img src="${s["after" + i]}" alt="3D render of ${p.name} at dusk">`;
       ba.prepend(after); ba.prepend(before);
     });
   }
@@ -442,7 +469,7 @@
     renderer.setClearColor(0x000000, 0);
     // The same dusk finish as the hero: each floor's windows light up once it is finished
     const K = duskKit();
-    K.gold = new THREE.MeshStandardMaterial({ color: 0xd48f00, roughness: 0.7 });
+    K.gold = new THREE.MeshStandardMaterial({ color: 0xe8a50c, emissive: 0x3a2400, roughness: 0.75 });
     const scene = new THREE.Scene(); duskLights(scene, isSmall ? 1024 : 2048, 40);
     const site = new THREE.Group();
     const pave = new THREE.Mesh(new THREE.BoxGeometry(30, 0.4, 22), K.paving); pave.position.y = -0.2; pave.receiveShadow = true; site.add(pave);
@@ -488,7 +515,7 @@
     function setActive(i) {
       active = i;
       document.querySelectorAll(".milestone").forEach(el => el.classList.toggle("on", +el.dataset.i === i));
-      caption.textContent = STORY[i].fl + " · " + STORY[i].year;
+      caption.textContent = STORY[i].fl;
       dirty = true;
     }
     const items = [...document.querySelectorAll(".milestone")];
@@ -604,23 +631,23 @@
       const head = cs(new THREE.Mesh(new THREE.BoxGeometry(s.hq ? 3.2 : 2.2, s.hq ? 1.0 : 0.7, s.hq ? 3.2 : 2.2), s.hq ? gold : charcoal)); head.position.y = len; g.add(head);
       scene.add(g);
       const label = document.createElement("button");
-      label.type = "button"; label.className = "pin-label" + (s.hq ? " hq" : ""); label.textContent = s.name;
+      label.type = "button"; label.className = "pin-label" + (s.hq ? " hq" : ""); label.textContent = s.name; label.style.visibility = "hidden";
       label.tabIndex = -1; label.setAttribute("aria-hidden", "true");
       label.addEventListener("click", () => select(i));
       stage.appendChild(label);
       return { head, label, top: new THREE.Vector3(x, y + len + 1.5, z), base: new THREE.Vector3(x, y, z), hq: s.hq };
     });
 
-    const cam = { az: 0.3, pol: 0.82, rad: 260, tx: 0, tz: 0 }, goal = { az: 0.3, rad: 260, tx: 0, tz: 0 };
+    const cam = { az: 0.3, pol: 0.82, rad: 380, tx: 0, tz: 12 }, goal = { az: 0.3, rad: 380, tx: 0, tz: 12 };
     let active = 0, dragging = false, lastX = 0, sx = 0, sy = 0, decided = false, horiz = false, visible = false, dirty = true;
     function select(i) {
       active = i;
       buttons.forEach((b, j) => b.setAttribute("aria-pressed", j === i ? "true" : "false"));
       pins.forEach((p, j) => { p.label.classList.toggle("on", j === i); p.head.material = j === i || p.hq ? gold : charcoal; });
-      goal.tx = pins[i].base.x * 0.5; goal.tz = pins[i].base.z * 0.5; goal.rad = 210; dirty = true;
+      goal.tx = pins[i].base.x * 0.5; goal.tz = pins[i].base.z * 0.5; goal.rad = 280; dirty = true;
     }
     buttons.forEach((b, i) => b.addEventListener("click", () => select(i)));
-    select(0); goal.rad = 260; goal.tx = 0; goal.tz = 0;
+    select(0); goal.rad = 380; goal.tx = 0; goal.tz = 12;
 
     stage.addEventListener("pointerdown", e => { if (e.target.classList.contains("pin-label")) return; dragging = true; decided = e.pointerType === "mouse"; horiz = decided; sx = lastX = e.clientX; sy = e.clientY; if (horiz) { stage.setPointerCapture(e.pointerId); stage.classList.add("dragging"); } });
     stage.addEventListener("pointermove", e => {
@@ -674,6 +701,7 @@
 
   renderContent();
   initSliders();
+  initCover();
   try { initStory(); } catch (e) { console.error(e); }
   try { initMap(); } catch (e) { console.error(e); }
   // Stills are rendered after first paint so the page text appears immediately

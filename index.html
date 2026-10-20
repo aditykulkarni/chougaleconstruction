@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Chougale Constructions</title>
-<meta name="description" content="Chougale Constructions, Shinganapur, Kolhapur. Homes, apartment buildings and commercial buildings across Kolhapur district.">
+<meta name="description" content="Chougale Constructions, Shinganapur, Kolhapur. A family firm handing over homes and buildings across Kolhapur district on the promised day for more than 30 years.">
+<meta name="theme-color" content="#1e1a17">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
@@ -12,342 +13,425 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Mukta:wght@400;500;600;700&display=swap">
 <style>
-/* Brand: charcoal 60% (backgrounds, headings), cream 30% (reading pages), haldi gold 10% (one slab, one rule, one button).
-   Big Shoulders Display in capitals for English headings, numbers and short labels; Mukta for all Marathi and body text.
-   Layout: alternating charcoal and cream bands, like an architect's model table. White clay models; the gold slab marks the floor being built. */
 :root {
   --charcoal: #1e1a17;
   --charcoal-2: #27221e;
-  --charcoal-line: #3b342e;
+  --charcoal-line: #4a423b;
   --cream: #f2ede4;
-  --cream-line: #d9d1c4;
+  --cream-2: #e9e2d6;
+  --cream-line: #cfc5b6;
   --stone: #645d55;
   --stone-light: #b5aca1;
   --gold: #e8a50c;
-  --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
   --body: "Mukta", "Segoe UI", system-ui, sans-serif;
-  color-scheme: dark;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
-:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--charcoal); color: var(--cream); font-family: var(--body); font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; scrollbar-color: var(--charcoal-line) var(--charcoal); }
+body { margin: 0; background: var(--charcoal); color: var(--cream); font-family: var(--body); font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; caret-color: var(--gold); }
+::selection { background: var(--gold); color: var(--charcoal); }
 img { max-width: 100%; display: block; }
 [hidden] { display: none !important; }
-h1, h2, h3, .h { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em; line-height: 0.98; text-wrap: balance; }
+h1, h2, h3, .disp { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em; line-height: 0.95; text-wrap: balance; }
 p { margin: 0; }
-a { color: inherit; }
+a { color: inherit; text-underline-offset: 0.2em; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
-.dark { background: var(--charcoal); color: var(--cream); --muted: var(--stone-light); --line: var(--charcoal-line); --ink: var(--cream); }
-.light { background: var(--cream); color: var(--charcoal); --muted: var(--stone); --line: var(--cream-line); --ink: var(--charcoal); }
-.label { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.82rem; color: var(--muted); }
-.mr { font-family: var(--body); font-weight: 600; letter-spacing: 0; text-transform: none; }
+.leaf :focus-visible { outline-color: var(--charcoal); }
+.mr { font-family: var(--body); letter-spacing: 0; text-transform: none; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.leaf { background: var(--cream); color: var(--charcoal); --muted: var(--stone); --rule: var(--cream-line); --ink: var(--charcoal); }
+.stock { background: var(--charcoal); color: var(--cream); --muted: var(--stone-light); --rule: var(--charcoal-line); --ink: var(--cream); }
 
-/* Header sits over the hero image */
-.site-header { position: absolute; top: 0; left: 0; right: 0; z-index: 5; background: linear-gradient(rgba(30,26,23,0.85), rgba(30,26,23,0)); }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 14px 28px; }
-.brand { display: block; flex: none; }
-.brand img { width: 240px; height: auto; }
-.nav { display: flex; align-items: center; gap: 30px; }
-.nav a { text-decoration: none; font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.92rem; color: var(--stone-light); }
-.nav a:hover { color: var(--cream); }
-.nav .call { color: var(--gold); letter-spacing: 0.06em; font-size: 1.05rem; font-variant-numeric: tabular-nums; }
-@media (max-width: 960px) { .nav a:not(.call) { display: none; } }
-@media (max-width: 520px) { .site-header .wrap { flex-wrap: wrap; gap: 4px; } .nav .call { font-size: 0.95rem; } }
-
-/* Buttons: the gold one is used once, in the hero */
-.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 26px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font: 700 1rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.12em; text-decoration: none; cursor: pointer; border-radius: 0; }
+/* Printed double rule, as on an invitation card */
+.rule2 { height: 5px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 28px; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); font: 700 1.05rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; cursor: pointer; border-radius: 0; transition: background 0.25s var(--ease), color 0.25s var(--ease); }
 .btn:hover { background: var(--ink); color: var(--charcoal); }
-.light .btn:hover { color: var(--cream); }
+.leaf .btn:hover { color: var(--cream); }
 .btn.gold { background: var(--gold); border-color: var(--gold); color: var(--charcoal); }
 .btn.gold:hover { background: var(--cream); border-color: var(--cream); }
+.btn svg { width: 18px; height: 18px; flex: none; }
 
-/* Hero: full-bleed dusk render, the name set huge across the top, the pitch along the bottom */
-.hero { position: relative; min-height: max(640px, 100svh); display: grid; overflow: hidden; isolation: isolate; }
-.hero-bg { position: absolute; inset: 0; z-index: -2; background: #151311; }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; opacity: 0; transition: opacity 1.2s ease; }
-.hero-bg img.in { opacity: 1; }
-.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(30,26,23,0.15) 0%, rgba(30,26,23,0) 30%, rgba(30,26,23,0.35) 58%, rgba(30,26,23,0.94) 88%, var(--charcoal) 100%); }
-.hero .wrap { display: grid; grid-template-rows: auto 1fr auto; width: 100%; padding-top: clamp(110px, 12vw, 140px); padding-bottom: clamp(32px, 5vw, 64px); }
-.hero .name.h { font-size: clamp(3.4rem, 8.3vw, 8.8rem); white-space: nowrap; line-height: 0.86; letter-spacing: 0.005em; color: var(--cream); text-shadow: 0 2px 30px rgba(0,0,0,0.25); }
-.hero .name .mr { display: block; font-size: clamp(1.15rem, 2vw, 1.6rem); line-height: 1.5; font-weight: 600; margin-top: 10px; letter-spacing: 0; }
-.hero-foot { grid-row: 3; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 28px clamp(24px, 5vw, 80px); align-items: end; }
-.hero-pitch { display: grid; gap: 22px; justify-items: start; }
-.hero-pitch h1 { font-size: clamp(2.2rem, 3.8vw, 3.4rem); }
-.hero .actions { display: flex; flex-wrap: wrap; gap: 14px; }
-.hero-right { display: grid; gap: 26px; }
-.hero-right .lede { color: var(--cream); max-width: 52ch; }
-.stats { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.stats div { display: grid; gap: 2px; border-left: 2px solid var(--cream); padding-left: 14px; }
-.stats dt { order: 2; color: var(--stone-light); font-size: 0.92rem; line-height: 1.3; }
-.stats dd { order: 1; margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1; font-variant-numeric: tabular-nums; }
-@media (max-width: 860px) {
-  .hero { min-height: 0; }
-  .hero .wrap { padding-top: 120px; grid-template-rows: auto minmax(34svh, 1fr) auto; }
-  .hero-foot { grid-template-columns: 1fr; }
-  .hero .name.h { white-space: normal; font-size: clamp(3.4rem, 15vw, 6rem); }
-  .hero-bg, .hero::after { bottom: auto; height: min(1000px, 100svh); }
-  .hero::after { background: linear-gradient(180deg, rgba(30,26,23,0.1) 0%, rgba(30,26,23,0) 40%, rgba(30,26,23,0.6) 75%, var(--charcoal) 100%); }
-  .hero { background: var(--charcoal); }
-  .hero-bg img { object-position: 50% 30%; }
+/* ---------- The card: closed on arrival, the cover lifts as you scroll ---------- */
+.cover { position: relative; height: 210svh; }
+.cover-stage { position: sticky; top: 0; height: 100svh; display: grid; place-items: center; perspective: 2400px; overflow: hidden; padding: 14px; }
+.card { position: relative; width: min(100%, 1120px); height: min(100%, 760px); transform-style: preserve-3d; }
+.inside { position: absolute; inset: 0; background: var(--charcoal); overflow: hidden; }
+.inside img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; transform: translateY(calc((1 - var(--p, 0)) * 18%)); opacity: 0; transition: opacity 1s var(--ease); }
+.inside img.in { opacity: 1; }
+.inside .note { position: absolute; left: 0; right: 0; bottom: 0; padding: clamp(20px, 4vw, 44px); background: linear-gradient(180deg, rgba(21,19,17,0) 0%, rgba(21,19,17,0.86) 55%); display: grid; gap: 6px; opacity: calc((var(--p, 0) - 0.55) * 3); }
+.inside .note p { max-width: 40ch; font-size: clamp(1.25rem, 2.2vw, 1.7rem); line-height: 1.3; font-weight: 500; }
+.inside .note .mr { font-size: 1.05rem; color: var(--stone-light); font-weight: 500; }
+.front { position: absolute; inset: 0; transform-origin: 50% 0; transform: rotateX(calc(var(--p, 0) * 158deg)); transform-style: preserve-3d; }
+.front-face, .front-back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.front-face { background: var(--charcoal); border: 1px solid var(--charcoal-line); box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6); display: grid; grid-template-rows: auto 1fr auto; }
+.front-back { background: var(--cream-2); transform: rotateY(180deg) rotateZ(180deg); }
+.front-face::before { content: ""; position: absolute; inset: calc(clamp(14px, 2.2vw, 22px) + 12px) 12px 12px; border: 1px solid var(--charcoal-line); outline: 1px solid var(--charcoal-line); outline-offset: 4px; pointer-events: none; }
+.foil { height: clamp(14px, 2.2vw, 22px); background: var(--gold) linear-gradient(100deg, transparent 0 40%, rgba(255,240,200,0.55) 50%, transparent 60% 100%) no-repeat; background-size: 300% 100%; background-position: calc(100% - var(--p, 0) * 160%) 0; }
+.front-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: clamp(22px, 3vw, 34px) clamp(26px, 4vw, 48px) 0; position: relative; }
+.front-top img { width: 240px; height: auto; }
+.front-top nav { display: flex; gap: 26px; }
+.front-top nav a { font: 700 0.95rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.12em; color: var(--stone-light); text-decoration: none; }
+.front-top nav a:hover { color: var(--cream); }
+@media (max-width: 900px) { .front-top nav { display: none; } }
+.front-body { align-self: center; justify-self: center; text-align: center; display: grid; justify-items: center; gap: clamp(14px, 2vw, 22px); padding: 0 24px; max-width: 900px; }
+.front-body .invite { font-size: clamp(1.3rem, 2.4vw, 1.75rem); font-weight: 600; color: var(--cream); line-height: 1.3; }
+.front-body h1 { font-size: clamp(3.2rem, 9vw, 6rem); color: var(--cream); }
+.front-body .what { max-width: 46ch; color: var(--stone-light); font-size: clamp(1rem, 1.6vw, 1.15rem); }
+.front-body .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px; }
+.front-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 0 clamp(26px, 4vw, 48px) clamp(24px, 3vw, 34px); color: var(--stone-light); font-size: 0.95rem; position: relative; }
+.front-foot .hint { display: inline-flex; align-items: center; gap: 8px; }
+.front-foot .hint svg { width: 16px; height: 16px; animation: nudge 2.4s var(--ease) infinite; }
+@keyframes nudge { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(4px); } }
+@media (max-width: 600px) {
+  .front-top { justify-content: center; }
+  .front-foot { justify-content: center; text-align: center; }
+  .front-foot .place { display: none; }
 }
-.still-pending { width: 100%; height: 100%; display: grid; place-items: center; color: var(--muted); font-size: 0.9rem; }
-figcaption, .caption { font-size: 0.85rem; color: var(--muted); }
 
-/* Services and steps: four or three columns, each under a large outlined number */
-.cols { display: grid; gap: clamp(28px, 3vw, 44px); }
-.cols.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.cols.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.col { display: grid; gap: 12px; align-content: start; border-top: 1px solid var(--line); padding-top: 22px; }
-.col .num { font-family: var(--display); font-weight: 800; font-size: clamp(4.2rem, 7vw, 6.4rem); line-height: 0.8; color: transparent; -webkit-text-stroke: 1.5px var(--line-strong); font-variant-numeric: tabular-nums; }
-.col h3 { font-size: clamp(1.5rem, 2vw, 1.9rem); line-height: 1.02; }
-.col p { color: var(--muted); }
-.dark { --line-strong: #5a5149; }
-.light { --line-strong: #b7ad9f; }
-@media (max-width: 980px) { .cols.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 760px) { .cols.three { grid-template-columns: 1fr; } }
-@media (max-width: 560px) { .cols.four { grid-template-columns: 1fr; } }
-.services { background: var(--charcoal-2); }
+/* Small bar that appears once the card is open */
+.bar { position: fixed; top: 0; left: 0; right: 0; z-index: 20; background: rgba(30,26,23,0.94); border-bottom: 1px solid var(--charcoal-line); transform: translateY(-100%); transition: transform 0.4s var(--ease); }
+.bar.on { transform: none; }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 60px; }
+.bar img { width: 36px; height: 36px; }
+.bar nav { display: flex; align-items: center; gap: 24px; }
+.bar nav a { font: 700 0.9rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.12em; color: var(--stone-light); text-decoration: none; }
+.bar nav a:hover { color: var(--cream); }
+.bar nav a.call { color: var(--cream); font-size: 1.05rem; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
+@media (max-width: 760px) { .bar nav a:not(.call) { display: none; } }
 
-/* Section heads */
-section.block { padding-block: clamp(64px, 9vw, 128px); }
-.block-head { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 12px clamp(24px, 4vw, 64px); margin-bottom: clamp(32px, 4vw, 56px); align-items: end; }
-.block-head h2 { font-size: clamp(2.4rem, 4.6vw, 3.8rem); }
-.block-head h2 .mr { display: block; font-size: 1.15rem; line-height: 1.6; color: var(--muted); margin-top: 10px; }
-.block-head p { color: var(--muted); max-width: 54ch; }
-@media (max-width: 860px) { .block-head { grid-template-columns: 1fr; } }
+/* ---------- The invitation text: who invites, to what, when, where ---------- */
+.wording { padding-block: clamp(80px, 11vw, 150px); text-align: center; }
+.wording .wrap { display: grid; justify-items: center; gap: clamp(40px, 5vw, 64px); }
+.wording .salute { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 600; line-height: 1.3; }
+.wording .salute span { display: block; font-size: 1rem; font-weight: 400; color: var(--muted); margin-top: 4px; }
+.verses { display: grid; gap: clamp(36px, 4vw, 52px); max-width: 760px; }
+.verse { display: grid; gap: 8px; justify-items: center; }
+.verse h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+.verse p { max-width: 52ch; color: var(--stone); }
+.verse .mr { font-weight: 600; font-size: 1.15rem; color: var(--charcoal); }
+.wording .rule2 { width: min(320px, 70%); }
 
-/* Projects */
-.proj-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 3vw, 40px); }
-@media (max-width: 980px) { .proj-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 640px) { .proj-list { grid-template-columns: 1fr; } }
-.proj { display: grid; gap: 12px; min-width: 0; align-content: start; }
-.ba { position: relative; aspect-ratio: 4 / 5; max-width: 100%; overflow: hidden; background: #151311; cursor: ew-resize; touch-action: pan-y; user-select: none; --pos: 50%; }
-.ba img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+/* ---------- Handovers: one invitation per finished building ---------- */
+.handovers { padding-block: clamp(80px, 10vw, 140px); }
+.sec-head { display: grid; gap: 12px; justify-items: center; text-align: center; margin-bottom: clamp(48px, 6vw, 80px); }
+.sec-head h2 { font-size: clamp(2.6rem, 6vw, 4.6rem); }
+.sec-head .mr { font-size: 1.2rem; font-weight: 600; color: var(--muted); }
+.sec-head p:not(.mr) { color: var(--muted); max-width: 52ch; }
+.sec-head .ph { font-size: 0.95rem; font-style: italic; }
+.handover { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 0; margin-bottom: clamp(48px, 7vw, 96px); background: var(--cream); color: var(--charcoal); position: relative; }
+.handover:nth-child(even) { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+.handover:nth-child(even) .ba { order: 2; }
+.handover-text { position: relative; padding: clamp(28px, 4vw, 52px); display: grid; align-content: center; justify-items: center; text-align: center; gap: 14px; }
+.handover-text::before { content: ""; position: absolute; inset: 12px; border: 1px solid var(--cream-line); outline: 1px solid var(--cream-line); outline-offset: 4px; pointer-events: none; }
+.handover-text h3 { font-size: clamp(2rem, 3.4vw, 2.9rem); }
+.handover-text .fam { color: var(--stone); }
+.handover-text dl { margin: 6px 0 0; display: grid; grid-template-columns: auto auto; gap: 4px 18px; text-align: left; font-size: 0.98rem; }
+.handover-text dt { color: var(--stone); }
+.handover-text dd { margin: 0; font-variant-numeric: tabular-nums; }
+.handover-text .kept { margin-top: 8px; font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; font-size: 1.15rem; border-top: 1px solid var(--cream-line); border-bottom: 1px solid var(--cream-line); padding: 6px 14px 4px; }
+@media (max-width: 860px) {
+  .handover, .handover:nth-child(even) { grid-template-columns: 1fr; }
+  .handover:nth-child(even) .ba { order: 0; }
+}
+.ba { position: relative; min-height: 420px; max-width: 100%; overflow: hidden; background: var(--charcoal); cursor: ew-resize; touch-action: pan-y; user-select: none; --pos: 50%; }
+@media (max-width: 860px) { .ba { min-height: 0; aspect-ratio: 4 / 5; } }
+.ba > img, .ba .after img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 .ba .after { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--pos)); }
 .ba .line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; transform: translateX(-1px); background: var(--cream); pointer-events: none; }
-.ba .knob { position: absolute; top: 50%; left: var(--pos); width: 38px; height: 38px; transform: translate(-50%, -50%); background: var(--cream); pointer-events: none; }
-.ba .knob::before, .ba .knob::after { content: ""; position: absolute; top: 50%; width: 7px; height: 7px; border-left: 2px solid var(--charcoal); border-bottom: 2px solid var(--charcoal); }
-.ba .knob::before { left: 10px; transform: translateY(-50%) rotate(45deg); }
-.ba .knob::after { right: 10px; transform: translateY(-50%) rotate(-135deg); }
-.ba .tag { position: absolute; top: 12px; pointer-events: none; color: var(--cream); }
-.ba .tag.l { left: 14px; } .ba .tag.r { right: 14px; }
+.ba .knob { position: absolute; top: 50%; left: var(--pos); width: 44px; height: 44px; transform: translate(-50%, -50%); background: var(--cream); pointer-events: none; display: grid; place-items: center; }
+.ba .knob svg { width: 22px; height: 22px; color: var(--charcoal); }
+.ba .tag { position: absolute; top: 14px; padding: 6px 8px 4px; background: rgba(30,26,23,0.82); pointer-events: none; color: var(--cream); font: 700 0.9rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.12em; text-shadow: 0 1px 8px rgba(0,0,0,0.5); }
+.ba .tag.l { left: 12px; } .ba .tag.r { right: 12px; }
 .ba input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
-.ba:focus-within { outline: 2px solid var(--cream); outline-offset: 3px; }
-.proj h3 { font-size: 1.7rem; margin-top: 6px; }
-.proj .mr { color: var(--muted); font-weight: 500; }
-.proj dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 16px; font-size: 0.95rem; border-top: 1px solid var(--line); padding-top: 10px; }
-.proj dt { color: var(--muted); }
-.proj dd { margin: 0; font-variant-numeric: tabular-nums; }
+.ba:focus-within { outline: 2px solid var(--gold); outline-offset: 3px; }
+.still-pending { position: absolute; inset: 0; display: grid; place-items: center; color: var(--stone-light); font-size: 0.95rem; }
 
-/* Story */
+/* ---------- Three ceremonies of every job ---------- */
+.rites { padding-block: clamp(80px, 10vw, 140px); }
+.rite-list { list-style: none; margin: 0 auto; padding: 0; max-width: 860px; border-top: 1.5px solid var(--charcoal); }
+.rite { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr); grid-template-areas: "mr t" "mr when" "mr d"; gap: 2px clamp(20px, 4vw, 48px); padding: clamp(22px, 3vw, 32px) 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.rite .rmr { grid-area: mr; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.35; align-self: center; }
+.rite h3 { grid-area: t; font-size: clamp(1.5rem, 2.2vw, 1.9rem); }
+.rite .when { grid-area: when; font-weight: 600; color: var(--stone); }
+.rite p { grid-area: d; color: var(--stone); max-width: 46ch; margin-top: 6px; }
+@media (max-width: 600px) { .rite { grid-template-columns: 1fr; grid-template-areas: "mr" "t" "when" "d"; } }
+
+/* ---------- Story: 30 years, one floor at a time ---------- */
+.story { padding-block: clamp(80px, 10vw, 140px) 0; }
 .story-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(24px, 4vw, 64px); }
-.story-stage { position: sticky; top: 12px; height: min(84svh, 760px); }
+.story-stage { position: sticky; top: 60px; height: min(84svh, 760px); }
 .story-stage canvas { display: block; width: 100%; height: 100%; }
-.story-stage .caption { position: absolute; left: 0; bottom: 8px; }
+.story-stage .caption { position: absolute; left: 0; bottom: 8px; color: var(--stone-light); font-size: 0.95rem; }
 .milestones { list-style: none; margin: 0; padding: 0; }
-.milestone { min-height: 64svh; padding-top: 20svh; display: grid; align-content: start; gap: 12px; color: var(--stone-light); transition: color 0.3s; }
+.milestone { min-height: 64svh; padding-top: 20svh; display: grid; align-content: start; gap: 10px; color: var(--stone-light); transition: color 0.4s var(--ease); }
 .milestone:first-child { padding-top: 8svh; }
-.milestone:last-child { min-height: 72svh; }
-.milestone .fl { display: flex; align-items: center; gap: 14px; }
-.milestone .fl::before { content: ""; width: 34px; height: 8px; background: var(--charcoal-line); transition: background 0.3s; }
-.milestone h3 { font-size: clamp(1.9rem, 3vw, 2.6rem); }
+.milestone:last-child { min-height: 80svh; }
+.milestone { scroll-margin-top: 60px; }
+.milestone .yr { text-transform: uppercase; font-family: var(--display); font-weight: 800; font-size: clamp(3.2rem, 6vw, 5rem); line-height: 0.9; color: #7a7067; transition: color 0.4s var(--ease); font-variant-numeric: tabular-nums; }
+.milestone h3 { font-size: clamp(1.8rem, 2.8vw, 2.4rem); }
 .milestone p { max-width: 36ch; }
 .milestone.on { color: var(--cream); }
-.milestone.on .fl::before { background: var(--gold); }
-.milestone.on .label { color: var(--cream); }
+.milestone.on .yr { color: var(--cream); }
 @media (max-width: 860px) {
   .story-grid { grid-template-columns: 1fr; gap: 0; }
-  .story-stage { top: 0; height: 46svh; z-index: 2; background: var(--charcoal); border-bottom: 1px solid var(--charcoal-line); }
+  .story-stage { top: 60px; height: 44svh; z-index: 2; background: var(--charcoal); border-bottom: 1px solid var(--charcoal-line); }
   .milestone { min-height: 46svh; padding-top: 8svh; }
-  .milestone:first-child { padding-top: 6svh; }
-  .milestone:last-child { min-height: 50svh; }
+  .milestone:last-child { min-height: 56svh; }
 }
 
-/* Footprint */
+/* ---------- Where our families live ---------- */
+.footprint { padding-block: clamp(80px, 10vw, 140px); }
 .map-grid { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
 .map-stage { position: relative; aspect-ratio: 4 / 3; max-width: 100%; touch-action: pan-y; cursor: grab; }
 .map-stage.dragging { cursor: grabbing; }
 .map-stage canvas { display: block; width: 100%; height: 100%; }
-.pin-label { position: absolute; left: 0; top: 0; font: 600 0.85rem/1.2 var(--body); color: var(--charcoal); white-space: nowrap; cursor: pointer; background: none; border: 0; padding: 2px 4px; }
-.pin-label.hq { font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.95rem; }
-.pin-label.on { box-shadow: inset 0 -3px 0 var(--gold); }
+.map-note { color: var(--stone); font-size: 0.95rem; margin-top: 8px; }
+.pin-label { position: absolute; left: 0; top: 0; font: 600 0.9rem/1.4 var(--body); color: var(--charcoal); white-space: nowrap; cursor: pointer; background: none; border: 0; padding: 2px 4px; }
+.pin-label.hq { font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; font-size: 1rem; }
+.pin-label.on { box-shadow: inset 0 -3px 0 var(--charcoal); }
 .map-stage.compact .pin-label:not(.hq):not(.on) { display: none !important; }
-.sites { width: 100%; border-collapse: collapse; }
-.sites th { text-align: left; padding: 0 0 10px; border-bottom: 2px solid var(--charcoal); }
-.sites td { padding: 0; border-bottom: 1px solid var(--line); }
-.sites button { all: unset; box-sizing: border-box; display: grid; grid-template-columns: 1fr auto; gap: 0 12px; width: 100%; padding: 12px 0; cursor: pointer; }
+.sites { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--charcoal); }
+.sites li { border-bottom: 1px solid var(--rule); }
+.sites button { all: unset; box-sizing: border-box; display: grid; grid-template-columns: 1fr auto; gap: 0 12px; width: 100%; padding: 12px 4px; cursor: pointer; }
+.sites button:hover { background: var(--cream-2); }
 .sites button:focus-visible { outline: 2px solid var(--charcoal); }
 .sites .n { font-weight: 700; }
-.sites .y { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 0.92rem; }
-.sites .t { grid-column: 1 / -1; color: var(--muted); font-size: 0.92rem; }
-.sites button[aria-pressed="true"] .n { box-shadow: inset 0 -3px 0 var(--gold); }
+.sites .y { color: var(--stone); font-variant-numeric: tabular-nums; font-size: 0.95rem; }
+.sites .t { grid-column: 1 / -1; color: var(--stone); font-size: 0.95rem; }
+.sites button[aria-pressed="true"] { background: var(--charcoal); color: var(--cream); }
+.sites button[aria-pressed="true"] .y, .sites button[aria-pressed="true"] .t { color: var(--stone-light); }
 @media (max-width: 860px) { .map-grid { grid-template-columns: 1fr; } .map-stage { aspect-ratio: 1 / 1; } }
 
-/* Contact */
-.contact-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 4vw, 64px); }
-.reach { display: grid; gap: 28px; align-content: start; }
-.reach .big { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 1; font-variant-numeric: tabular-nums; }
-.reach dl { margin: 0; display: grid; gap: 18px; }
-.reach dd { margin: 4px 0 0; }
-form.enq { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; }
-form.enq label { display: grid; gap: 6px; color: var(--stone-light); font-size: 0.95rem; }
+/* ---------- RSVP: the close of every invitation ---------- */
+.rsvp { padding-block: clamp(80px, 10vw, 140px); }
+.rsvp-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
+.rsvp-card { position: relative; text-align: center; display: grid; gap: 18px; justify-items: center; padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 44px); border: 1px solid var(--charcoal-line); outline: 1px solid var(--charcoal-line); outline-offset: -8px; }
+.rsvp-card .mr.big { font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 600; }
+.rsvp-card h2 { font-size: clamp(2.6rem, 5vw, 4rem); }
+.rsvp-card .phone { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1; letter-spacing: 0.02em; text-decoration: none; font-variant-numeric: tabular-nums; }
+.rsvp-card .phone:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.rsvp-card .sign { color: var(--stone-light); }
+.rsvp-card .sign .mr { display: block; color: var(--cream); font-size: 1.2rem; font-weight: 600; }
+.rsvp-card address { font-style: normal; color: var(--stone-light); }
+.rsvp-card .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+form.enq { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+form.enq h3 { grid-column: 1 / -1; font-size: clamp(1.6rem, 2.4vw, 2rem); }
+form.enq .lead { grid-column: 1 / -1; color: var(--stone-light); margin-top: -8px; }
+form.enq label { display: grid; gap: 6px; color: var(--stone-light); font-size: 0.98rem; }
 form.enq .full { grid-column: 1 / -1; }
-form.enq input, form.enq select, form.enq textarea { font: inherit; color: var(--cream); background: var(--charcoal-2); border: 0; border-bottom: 2px solid var(--charcoal-line); padding: 10px 12px; border-radius: 0; width: 100%; }
+form.enq input, form.enq select, form.enq textarea { font: inherit; color: var(--cream); background: var(--charcoal-2); border: 0; border-bottom: 1.5px solid var(--charcoal-line); padding: 10px 12px; border-radius: 0; width: 100%; }
 form.enq input:focus, form.enq select:focus, form.enq textarea:focus { border-bottom-color: var(--gold); outline: none; }
+form.enq input:user-invalid { border-bottom-color: #e07a5f; }
+form.enq .err { grid-column: 1 / -1; color: #f0a48f; }
 form.enq textarea { resize: vertical; }
+form.enq ::placeholder { color: var(--stone-light); opacity: 1; }
+form.enq select { appearance: none; -webkit-appearance: none; padding-right: 40px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b5aca1' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 18px; }
 form.enq .ok { grid-column: 1 / -1; color: var(--cream); }
-@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .rsvp-grid { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { form.enq { grid-template-columns: 1fr; } }
 
-footer { padding-block: 40px 56px; border-top: 1px solid var(--charcoal-line); color: var(--stone-light); font-size: 0.92rem; }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 32px; align-items: end; }
-footer .rule { width: 56px; height: 4px; background: var(--gold); margin-bottom: 14px; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .milestone, .milestone .fl::before { transition: none; } }
+footer { padding-block: 36px 52px; border-top: 1px solid var(--charcoal-line); color: var(--stone-light); font-size: 0.95rem; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; }
+
+/* Without motion the card simply sits open above the page */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cover { height: auto; }
+  .cover-stage { position: relative; height: auto; display: grid; gap: 14px; perspective: none; }
+  .card { height: auto; display: grid; gap: 14px; }
+  .front, .inside { position: relative; transform: none; }
+  .front { order: -1; }
+  .front { min-height: 92svh; }
+  .front-back { display: none; }
+  .inside { aspect-ratio: 16 / 9; }
+  .inside .note { opacity: 1; }
+  @media (max-width: 600px) { .inside { aspect-ratio: auto; display: grid; } .inside img { aspect-ratio: 4 / 5; height: auto; } .inside .note { position: static; background: var(--charcoal); } }
+  .inside img { transform: none; }
+  .front-foot .hint svg { animation: none; }
+  .milestone, .milestone .yr { transition: none; }
+}
 </style>
 </head>
 <body>
 
-<header class="site-header dark">
+<header class="bar" id="bar" aria-label="Site">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="assets/chougale-logo-horizontal-dark.svg" alt="Chougale Constructions · चौगले कन्स्ट्रक्शन्स" width="240" height="84"></a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
+    <a href="#top"><img src="assets/chougale-icon-dark.svg" alt="Chougale Constructions, back to top" width="36" height="36"></a>
+    <nav aria-label="Sections">
+      <a href="#handovers">Handovers</a>
       <a href="#story">Our story</a>
       <a href="#footprint">Where we build</a>
-      <a href="#contact">Contact</a>
+      <a href="#rsvp">Contact</a>
       <a class="call" href="tel:+910000000000">+91 00000 00000</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <section class="hero dark">
-    <div class="hero-bg" id="heroBg"></div>
-    <div class="wrap">
-      <p class="name h">Chougale Constructions<span class="mr" lang="mr">चौगले कन्स्ट्रक्शन्स</span></p>
-      <div class="hero-foot">
-        <div class="hero-pitch">
-          <h1>Plan. Build.<br>Hand over.</h1>
-          <div class="actions">
-            <a class="btn gold" href="#contact">Discuss your project</a>
-            <a class="btn" href="#projects">See our work</a>
+<main>
+  <section class="cover" id="top" aria-label="Invitation">
+    <div class="cover-stage">
+      <div class="card" id="card">
+        <div class="inside" id="inside">
+          <div class="note">
+            <p>Every building in these pages was handed over on the day we promised the family.</p>
+            <p class="mr" lang="mr">दिलेल्या दिवशी, दिलेल्या शब्दात.</p>
           </div>
         </div>
-        <div class="hero-right">
-          <p class="lede">Homes, apartment buildings, shops and industrial sheds across Kolhapur district. We take each job from bare plot to handover with our own site team, from our yard in Shinganapur.</p>
-          <dl class="stats">
-            <div><dt>Building since</dt><dd>2004</dd></div>
-            <div><dt>Projects handed over</dt><dd>150+</dd></div>
-            <div><dt>Talukas we work in</dt><dd>8</dd></div>
-          </dl>
+        <div class="front">
+          <div class="front-face">
+            <div class="foil"></div>
+            <div class="front-top">
+              <img src="assets/chougale-logo-horizontal-dark.svg" alt="Chougale Constructions · चौगले कन्स्ट्रक्शन्स" width="240" height="84">
+              <nav aria-label="Sections">
+                <a href="#handovers">Handovers</a>
+                <a href="#story">Our story</a>
+                <a href="#footprint">Where we build</a>
+                <a href="#rsvp">Contact</a>
+              </nav>
+            </div>
+            <div class="front-body">
+              <h1>You are invited to see what we built</h1>
+              <p class="invite mr" lang="mr">सस्नेह निमंत्रण</p>
+              <p class="what">For more than 30 years, Kolhapur families have moved into homes built by the Chougale family, on the day we promised them.</p>
+              <div class="actions">
+                <a class="btn gold" href="tel:+910000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Call for a site visit</a>
+                <a class="btn" href="https://wa.me/910000000000">WhatsApp us</a>
+              </div>
+            </div>
+            <div class="front-foot">
+              <span class="place">Shinganapur, Kolhapur</span>
+              <span class="hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Scroll to open</span>
+            </div>
+          </div>
+          <div class="front-back" aria-hidden="true"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="block dark services" id="services">
+  <section class="wording leaf" aria-labelledby="w-who">
     <div class="wrap">
-      <div class="block-head">
-        <h2>What we do<span class="mr" lang="mr">आमच्या सेवा</span></h2>
-        <p>One firm from the first drawing to the keys. You deal with one team and one site engineer the whole way.</p>
+      <p class="salute mr" lang="mr">आमच्या घरच्या कार्याला अगत्य येण्याचे करावे<span lang="en">Do come, as family</span></p>
+      <div class="rule2"></div>
+      <div class="verses">
+        <div class="verse">
+          <h2 id="w-who">The Chougale family</h2>
+          <p class="mr" lang="mr">चौगले परिवार, शिंगणापूर</p>
+          <p>Builders in Shinganapur for more than 30 years. Our name is on every building, so one of us answers for it, from the plot to the keys.</p>
+        </div>
+        <div class="verse">
+          <h2>invites you to the handover of your home</h2>
+          <p class="mr" lang="mr">तुमच्या घराचा गृहप्रवेश</p>
+          <p>Houses, bungalows, apartment buildings, shops and industrial sheds, built by our own site team rather than hired crews.</p>
+        </div>
+        <div class="verse">
+          <h2>on the date we promise</h2>
+          <p class="mr" lang="mr">ठरलेल्या दिवशी</p>
+          <p>We fix the handover date before work starts and write it into the agreement.</p>
+        </div>
+        <div class="verse">
+          <h2>anywhere in Kolhapur district</h2>
+          <p class="mr" lang="mr">कोल्हापूर जिल्ह्यात कुठेही</p>
+          <p>From Panhala and Radhanagari to Ichalkaranji and Gadhinglaj.</p>
+        </div>
       </div>
-      <div class="cols four" id="serviceCols"></div>
     </div>
   </section>
 
-  <section class="block dark" id="projects">
+  <section class="handovers stock" id="handovers" aria-labelledby="h-title">
     <div class="wrap">
-      <div class="block-head">
-        <h2>Flagship projects<span class="mr" lang="mr">प्रमुख प्रकल्प</span></h2>
-        <p>Drag across each picture to go from the empty plot to the finished building.</p>
+      <div class="sec-head">
+        <h2 id="h-title">Handovers</h2>
+        <p class="mr" lang="mr">गृहप्रवेश</p>
+        <p>Drag across each picture to go from the bare plot to the day the family moved in.</p>
       </div>
-      <div class="proj-list" id="projList"></div>
+      <div id="projList"></div>
     </div>
   </section>
 
-  <section class="block light" id="steps">
+  <section class="rites leaf" aria-labelledby="r-title">
     <div class="wrap">
-      <div class="block-head">
-        <h2>Three steps to your building<span class="mr" lang="mr">तीन टप्प्यांत तुमची इमारत</span></h2>
-        <p>The same three steps for a bungalow or a six-storey block.</p>
+      <div class="sec-head">
+        <h2 id="r-title">Every job, three ceremonies</h2>
+        <p>The same three days mark a bungalow or a six-storey block. We are there for all of them.</p>
       </div>
-      <div class="cols three" id="stepCols"></div>
+      <ol class="rite-list" id="riteList"></ol>
     </div>
   </section>
 
-  <section class="block dark" id="story">
+  <section class="story stock" id="story" aria-labelledby="s-title">
     <div class="wrap">
-      <div class="block-head">
-        <h2>Our story, floor by floor<span class="mr" lang="mr">आमचा प्रवास, मजल्या-मजल्याने</span></h2>
-        <p>Every floor of this building is one chapter of the firm, from the first yard in Shinganapur to the work we do today.</p>
+      <div class="sec-head">
+        <h2 id="s-title">Thirty years, one floor at a time</h2>
+        <p class="mr" lang="mr">आमचा प्रवास, मजल्या-मजल्याने</p>
+        <p>Each floor of this building is one chapter of the family firm.</p>
+        <p class="ph">Years and milestones are placeholders until the family confirms them.</p>
       </div>
       <div class="story-grid">
         <div class="story-stage" id="storyStage">
           <canvas id="storyCanvas" aria-hidden="true"></canvas>
-          <p class="caption" id="storyCaption">Ground floor · 2004</p>
+          <p class="caption" id="storyCaption">Ground floor</p>
         </div>
         <ol class="milestones" id="milestones"></ol>
       </div>
     </div>
   </section>
 
-  <section class="block light" id="footprint">
+  <section class="footprint leaf" id="footprint" aria-labelledby="f-title">
     <div class="wrap">
-      <div class="block-head">
-        <h2>Where we build<span class="mr" lang="mr">आमचे कार्यक्षेत्र</span></h2>
+      <div class="sec-head">
+        <h2 id="f-title">Where our families live</h2>
+        <p class="mr" lang="mr">आमचे कार्यक्षेत्र</p>
         <p>Kolhapur district, from the Sahyadri foothills in the west to the Panchganga plain in the east. Drag the model to turn it, or pick a place.</p>
       </div>
       <div class="map-grid">
         <div>
           <div class="map-stage" id="mapStage"><canvas id="mapCanvas" aria-label="Relief model of Kolhapur district with our sites marked"></canvas></div>
-          <p class="caption">Relief model, positions approximate. The Panchganga is shown in blue.</p>
+          <p class="map-note">Relief model, positions approximate. The Panchganga is shown in blue.</p>
         </div>
-        <table class="sites">
-          <thead><tr><th class="label">Place and work</th></tr></thead>
-          <tbody id="siteRows"></tbody>
-        </table>
+        <div>
+          <ul class="sites" id="siteRows" aria-label="Places we build"></ul>
+          <p class="map-note">Places and years are placeholders until confirmed.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="block dark" id="contact">
-    <div class="wrap">
-      <div class="block-head">
-        <h2>Discuss your project<span class="mr" lang="mr">संपर्क साधा</span></h2>
-        <p>Tell us about the plot and what you want to build. We usually visit the site within a week.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="reach">
-          <p class="big">+91 00000 00000</p>
-          <dl>
-            <div><dt class="label">WhatsApp</dt><dd>+91 00000 00000</dd></div>
-            <div><dt class="label">Office and yard</dt><dd>Chougale Constructions, Shinganapur, Karvir, Kolhapur 416010</dd></div>
-            <div><dt class="label">Email</dt><dd>office@example.com</dd></div>
-          </dl>
+  <section class="rsvp stock" id="rsvp" aria-labelledby="c-title">
+    <div class="wrap rsvp-grid">
+      <div class="rsvp-card">
+        <h2 id="c-title">Call us about your plot</h2>
+        <a class="phone" href="tel:+910000000000">+91 00000 00000</a>
+        <div class="actions">
+          <a class="btn gold" href="tel:+910000000000">Call now</a>
+          <a class="btn" href="https://wa.me/910000000000">WhatsApp</a>
         </div>
-        <form class="enq" id="enq">
-          <label for="f-name">Name<input id="f-name" name="name" required autocomplete="name"></label>
-          <label for="f-phone">Phone<input id="f-phone" name="phone" required inputmode="tel" autocomplete="tel"></label>
-          <label for="f-type">Type of building
-            <select id="f-type" name="type"><option>House or bungalow</option><option>Apartment building</option><option>Shops or offices</option><option>Industrial shed</option><option>Other</option></select>
-          </label>
-          <label for="f-where">Plot location<input id="f-where" name="where" placeholder="Village or area"></label>
-          <label class="full" for="f-msg">Anything else<textarea id="f-msg" name="msg" rows="3"></textarea></label>
-          <div class="full"><button class="btn" type="submit">Send enquiry</button></div>
-          <p class="ok" id="enqOk" hidden>Thank you. The form is not connected yet, so please call or WhatsApp us for now.</p>
-        </form>
+        <address>Chougale Constructions, Shinganapur, Karvir, Kolhapur 416010<br>office@example.com</address>
+        <p class="sign">With regards, yours sincerely<span class="mr" lang="mr">कळावे, लोभ असावा. आपले नम्र, चौगले परिवार</span></p>
       </div>
+      <form class="enq" id="enq" novalidate>
+        <h3>Or write to us</h3>
+        <p class="lead">Tell us about the plot. One of the family will call you back.</p>
+        <label for="f-name">Your name<input id="f-name" name="name" required autocomplete="name"></label>
+        <label for="f-phone">Phone<input id="f-phone" name="phone" required inputmode="tel" autocomplete="tel" pattern="[0-9 +\-]{10,}"></label>
+        <label for="f-type">What you want to build
+          <select id="f-type" name="type"><option>House or bungalow</option><option>Apartment building</option><option>Shops or offices</option><option>Industrial shed</option><option>Something else</option></select>
+        </label>
+        <label for="f-where">Where the plot is<input id="f-where" name="where" placeholder="Village or area"></label>
+        <label class="full" for="f-msg">Anything else<textarea id="f-msg" name="msg" rows="3"></textarea></label>
+        <p class="err" id="enqErr" role="alert" hidden>Please add your name and a phone number with at least 10 digits.</p>
+        <div class="full"><button class="btn" type="submit">Send</button></div>
+        <p class="ok" id="enqOk" hidden>Thank you. This form is not connected yet, so please call or WhatsApp us for now.</p>
+      </form>
     </div>
   </section>
 </main>
 
-<footer class="dark">
+<footer class="stock">
   <div class="wrap">
-    <div><div class="rule"></div>© Chougale Constructions · <span class="mr" lang="mr">चौगले कन्स्ट्रक्शन्स</span> · Shinganapur, Kolhapur</div>
-    <span>Phone numbers, years, figures and projects on this page are placeholders until confirmed.</span>
+    <span>© Chougale Constructions · <span class="mr" lang="mr">चौगले कन्स्ट्रक्शन्स</span> · Shinganapur, Kolhapur</span>
+    <span>Phone numbers, years, projects and pictures are placeholders until confirmed. Pictures are 3D renders.</span>
   </div>
 </footer>
 
