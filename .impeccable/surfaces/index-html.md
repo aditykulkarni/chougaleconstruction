@@ -10,20 +10,20 @@ related_targets: []
 Scope: the single-page site (index.html). Mode: Persuade.
 Audience: Kolhapur district families and landowners first, also shop and factory owners; mostly on phones.
 Action: call, WhatsApp, or ask for a site visit.
-Proof: 30+ years, family name, on-time handover, own site team, one person answerable. Real photos and project list pending from Aditya; all content placeholder and labelled.
-Constraints: brand guidelines (charcoal, cream, haldi gold, Big Shoulders + Mukta, slab monogram logo); keep story floor by floor, before/after, 3D district map.
-Roll: degraded (no challengers); presented through a decision card, not the decision page.
+Proof: 30+ years, family name, on-time handover, own site team, one person answerable.
+Constraints: brand colours and slab monogram logo; keep story floor by floor, before/after, 3D district map. Aditya rejected the invitation build (2026-10-20) as still AI-looking: wants real photos (web references as stand-ins, hotlinked from Unsplash, cannot be downloaded or seen in this environment), a better font, a stronger main page. Big Shoulders replaced by Anek at Aditya's request.
+Roll: degraded (no challengers); re-roll 1 presented through a decision card. Aditya picked the family album.
 
 ## Direction contract
 
-THESIS: The site is the gruhapravesh invitation a family sends when they move into a house Chougale built. It refuses the builder template of hero photo, stat row, service cards and project grid.
+THESIS: The site is the Chougale family's photo album of buildings handed over: real photographs mounted on album pages with captions and date stamps. It refuses the builder template of a hero photo with overlaid text, stat tiles, service cards and a project grid.
 
-OWN-WORLD: Charcoal card stock with one haldi-gold foil band, as on a printed patrika. Cream inner leaves. Centred invitation typesetting with clear blocks for who invites, what, where and when. Big Shoulders capitals for English, Mukta for Marathi. Fine printed rules, never boxes. Gold is used only as the foil band and the one action.
+OWN-WORLD: Charcoal album pages. Photographs mounted as prints with cream borders and charcoal photo corners, slightly off-square as if placed by hand. Captions are set in Anek on cream slips. Date stamps sit in the print corner in gold, like a camera's date imprint. Anek Latin and Anek Devanagari carry English and Marathi in one voice.
 
-STORY: The visitor sees that families have moved into Chougale buildings on the promised day for three decades. They believe the family name will answer to them. Then they call.
+STORY: The visitor sees real buildings and the day families moved in. They believe the family has done this for 30 years. Then they call.
 
-FIRST VIEWPORT: A closed charcoal card fills the screen, with the logo, the Marathi and English name, the line "you are invited to see what we built", and the call button. On scroll the card folds open and the building rises from inside it.
+FIRST VIEWPORT: A large mounted print of a finished building fills most of the screen, held by four photo corners. A cream caption slip overlaps its lower left, carrying the name, the line about 30 years of families moving in, and the call button. The logo and a short nav sit above it on the album page.
 
-FORM: Grounded candidate 5 of 7 (gruhapravesh invitation), seed:8a197cb37d6ef48b.
+FORM: Grounded candidate 3 of 7 (family photo album), seed:8a197cb37d6ef48b, re-roll 1.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

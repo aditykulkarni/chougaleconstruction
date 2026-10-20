@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wdth,wght@75..125,400..800&family=Anek+Latin:wdth,wght@75..125,400..800&display=swap">
+<link rel="stylesheet" href="album.css">
+<link rel="icon" href="../assets/favicon-32.png">
+<title>Chougale Constructions, idea B</title>
+<style>
+.hero { padding-block: clamp(16px, 3vw, 40px) clamp(60px, 8vw, 110px); }
+.book { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(24px, 4vw, 64px); align-items: center; min-height: min(82vh, 820px); }
+.left { display: grid; gap: clamp(18px, 2.4vw, 28px); align-content: center; }
+.left h1 { font-size: clamp(3.4rem, 8.4vw, 7.6rem); font-variation-settings: "wdth" 75; line-height: 0.9; }
+.left h1 .mr { display: block; font-size: 0.5em; font-variation-settings: "wdth" 85; color: var(--gold); margin-bottom: 10px; line-height: 1.15; }
+.left .line { font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; max-width: 30ch; color: var(--cream); }
+.left .line.mr { color: var(--stone-light); font-size: 1.1rem; }
+.left .acts { display: flex; flex-wrap: wrap; gap: 10px; }
+.left .btn.ghost:hover { background: var(--cream); color: var(--page); }
+.left .who { color: var(--stone-light); font-size: 0.95rem; max-width: 36ch; }
+.right { position: relative; aspect-ratio: 1 / 1.02; }
+.right .print { position: absolute; }
+.right .p1 { left: 0; top: 4%; width: 58%; transform: rotate(-4deg); z-index: 1; }
+.right .p1 .ph { aspect-ratio: 4 / 5; }
+.right .p2 { right: 0; top: 0; width: 56%; transform: rotate(3deg); z-index: 2; }
+.right .p2 .ph { aspect-ratio: 1 / 1; }
+.right .p3 { left: 18%; bottom: 0; width: 64%; transform: rotate(-1deg); z-index: 3; }
+.right .p3 .ph { aspect-ratio: 3 / 2; }
+.right figcaption { position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%) rotate(1deg); background: var(--slip); color: var(--page); padding: 6px 12px; font-weight: 600; font-size: 0.9rem; white-space: nowrap; box-shadow: 0 8px 16px -8px rgba(0,0,0,0.7); }
+.right .p1 figcaption { bottom: auto; top: -14px; }
+.right figcaption .mr { font-weight: 600; margin-right: 6px; }
+
+@media (max-width: 860px) {
+  .book { grid-template-columns: 1fr; min-height: 0; }
+  .right { aspect-ratio: 1 / 1.1; margin-top: 12px; }
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="#" aria-label="Chougale Constructions, home"><img src="../assets/chougale-logo-horizontal-dark.svg" alt="चौगले कन्स्ट्रक्शन्स Chougale Constructions" width="240" height="60"></a><nav aria-label="Main"><a href="#handovers">Handovers</a><a href="#story">Our story</a><a href="#footprint">Where we build</a><a class="call" href="tel:+910000000000">+91 00000 00000</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap">
+  <div class="book">
+    <div class="left">
+      <h1><span class="mr" lang="mr">चौगले कन्स्ट्रक्शन्स</span>Chougale Constructions</h1>
+      <p class="line">More than 30 years of Kolhapur families moving in on the day we promised.</p>
+      <p class="line mr" lang="mr">भूमिपूजनापासून गृहप्रवेशापर्यंत, एकच जबाबदार माणूस.</p>
+      <div class="acts"><a class="btn gold" href="tel:+910000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg> Call for a site visit</a><a class="btn ghost" href="https://wa.me/910000000000">WhatsApp us</a></div>
+      <p class="who">One family name, our own site team, Shinganapur to Ichalkaranji.</p>
+    </div>
+    <div class="right" aria-label="Three photos from one family's album">
+      <figure class="print p1"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1663057276815-0e07863a2e46?auto=format&fit=crop&w=800&q=70" alt="A building going up behind scaffolding"></div>
+        <span class="stamp">'22 08 14</span><figcaption><span class="mr" lang="mr">स्लॅब</span>Slab day</figcaption></figure>
+      <figure class="print p2"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1511763508683-99dc7949e97f?auto=format&fit=crop&w=800&q=70" alt="A smiling woman in a sari standing at a doorway"></div>
+        <span class="stamp">'24 01 26</span><figcaption><span class="mr" lang="mr">गृहप्रवेश</span>Moving in</figcaption></figure>
+      <figure class="print p3"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1657302157898-eda546941dde?auto=format&fit=crop&w=1100&q=70" alt="A finished family house with a red roof" fetchpriority="high"></div>
+        <span class="stamp">'24 02 03</span><figcaption><span class="mr" lang="mr">घर</span>Sample Bungalow, Panhala road</figcaption></figure>
+    </div>
+  </div>
+</div></section>
+<section class="next" id="handovers"><div class="wrap">
+  <div class="head"><h2>The day they moved in</h2><p class="mr" lang="mr">ज्या दिवशी कुटुंब घरी आलं</p></div>
+  <div class="spread">
+    <figure class="print before"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="ph"><img src="https://images.unsplash.com/photo-1621511075938-f03482369feb?auto=format&fit=crop&w=900&q=70" alt="A concrete frame under construction with bamboo scaffolding" loading="lazy"></div>
+      <span class="stamp">'22 08 14</span></figure>
+    <div>
+      <figure class="print after"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1787055482226-8544df1e754a?auto=format&fit=crop&w=1200&q=70" alt="The finished apartment building above green trees" loading="lazy"></div>
+        <span class="stamp">'24 01 26</span></figure>
+      <div class="cap"><h3>Sample Residency, Kolhapur city</h3><p>Apartment building, G+6. Promised for January 2024. <span class="kept">Keys handed over 26 January 2024.</span></p></div>
+    </div>
+  </div>
+</div></section>
+<footer class="credit"><div class="wrap">Every name, date and figure here is a placeholder. Photos are reference stand-ins from Unsplash by Hrishikesh Chhatre, Design Hills, Rohan Solankurkar, Darshan Bacchav and Vignesh Moorthy, until the family's own photos go in.</div></footer>
+</main>
+<a class="compare" href="idea-a.html">See idea A</a>
+</body>
+</html>
